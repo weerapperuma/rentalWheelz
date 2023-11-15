@@ -1,0 +1,20 @@
+/* styles.css */
+
+/* Style for the button */
+.bigButton {
+    -fx-font-size: 24px; /* Set the font size to make it a big button */
+    -fx-background-color:rgba(0, 0, 0, 0);; /* Set the background color */
+    -fx-text-fill: #ffffff; /* Set the text color */
+    -fx-border-radius: 30;
+    -fx-background-radius: 30;
+    -fx-border-color: #001c83;
+    -fx-padding: 10px 20px; /* Set padding to make it visually larger */
+    -fx-cursor: hand; /* Change cursor to hand on hover */
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.5) , 10,0,0,1 );
+}
+
+/* Hover effect */
+.bigButton:hover {
+    -fx-background-color: #113bd2; /* Change background color on hover */
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.8) , 15,0,0,1 ); /* Add a stronger shadow on hover */
+}

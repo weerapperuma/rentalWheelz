@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="760.0" prefWidth="1055.0" style="-fx-background-radius: 20; -fx-background-color: white;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.penguin.rentalWheelz.controller.EmployeeFormController">
+    <children>
+        <TableView fx:id="tblEmployee" layoutX="5.0" layoutY="306.0" prefHeight="449.0" prefWidth="1046.0">
+            <columns>
+                <TableColumn fx:id="colEmpID" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="colEmpName" prefWidth="174.39995574951172" text="Name" />
+                <TableColumn fx:id="colEmpEmail" prefWidth="185.60000610351562" text="Email" />
+                <TableColumn fx:id="colEmpPosition" prefWidth="143.7333221435547" text="Position" />
+                <TableColumn fx:id="colEmpAddress" prefWidth="298.666748046875" text="Address" />
+                <TableColumn fx:id="colEmpContact" prefWidth="166.1331787109375" text="Contact" />
+            </columns>
+        </TableView>
+        <TextField fx:id="txtEmpId" layoutX="54.0" layoutY="38.0" promptText="ID" />
+        <TextField fx:id="txtEmpEmail" layoutX="224.0" layoutY="38.0" promptText="Email" />
+        <TextField fx:id="txtEmpName" layoutX="52.0" layoutY="84.0" promptText="Name" />
+        <TextField fx:id="txtEmpPosition" layoutX="224.0" layoutY="84.0" promptText="Position" />
+        <TextField fx:id="txtEmpAddress" layoutX="410.0" layoutY="39.0" promptText="Address" />
+        <TextField fx:id="txtEmpContact" layoutX="411.0" layoutY="86.0" promptText="Contact" />
+        <JFXButton layoutX="609.0" layoutY="22.0" onAction="#btnEmpSave" prefHeight="26.0" prefWidth="79.0" text="Save" />
+        <JFXButton layoutX="797.0" layoutY="23.0" onAction="#btnEmpUpdate" prefHeight="26.0" prefWidth="79.0" text="Update" />
+        <JFXButton layoutX="704.0" layoutY="26.0" onAction="#btnEmpDelete" prefHeight="26.0" prefWidth="79.0" text="Delete" />
+        <JFXButton layoutX="890.0" layoutY="23.0" onAction="#btnEmpClear" prefHeight="26.0" prefWidth="79.0" text="Clear" />
+        <JFXButton layoutX="621.0" layoutY="71.0" onAction="#btnEmpEmployee" prefHeight="26.0" prefWidth="79.0" text="Employee" />
+        <JFXButton layoutX="717.0" layoutY="73.0" onAction="#btnEmpSalary" prefHeight="26.0" prefWidth="79.0" text="Salary" />
+    </children>
+</AnchorPane>

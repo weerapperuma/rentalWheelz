@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="760.0" prefWidth="1055.0" style="-fx-background-radius: 20; -fx-background-color: white;" stylesheets="@../button.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.penguin.rentalWheelz.controller.CustomerFormController">
+    <children>
+        <TableView layoutX="8.0" layoutY="321.0" prefHeight="435.0" prefWidth="1043.0">
+            <columns>
+                <TableColumn prefWidth="75.0" text="id" />
+                <TableColumn prefWidth="283.46666717529297" text="name" />
+                <TableColumn prefWidth="260.8000793457031" text="Address" />
+                <TableColumn prefWidth="41.86669921875" text="contact" />
+            <TableColumn prefWidth="557.333251953125" text="User Id" />
+            </columns>
+        </TableView>
+        <TextField fx:id="txtCustName" layoutX="737.0" layoutY="21.0" prefHeight="40.0" prefWidth="216.0" promptText="ID number" />
+        <JFXButton layoutX="63.0" layoutY="65.0" onAction="#btnCustSave" prefHeight="34.0" prefWidth="87.0" styleClass="btn" text="Save" />
+        <JFXButton layoutX="61.0" layoutY="132.0" onAction="#btnCustUpdate" prefHeight="34.0" prefWidth="87.0" styleClass="btn" text="Update" />
+        <JFXButton layoutX="74.0" layoutY="203.0" onAction="#btnCustDelete" prefHeight="34.0" prefWidth="87.0" styleClass="btn" text="Delete" />
+        <JFXButton layoutX="303.0" layoutY="131.0" onAction="#btnCustClear" prefHeight="34.0" prefWidth="87.0" styleClass="btn" text="Clear" />
+      <Label layoutX="411.0" layoutY="12.0" prefHeight="45.0" prefWidth="288.0" styleClass="bigButton" text="Customer Manage" textFill="#1e00ff">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="306.0" layoutY="70.0" onAction="#btnCustClear" prefHeight="34.0" prefWidth="87.0" styleClass="btn" text="Search" />
+      <TextField fx:id="txtCustName1" layoutX="741.0" layoutY="105.0" prefHeight="40.0" prefWidth="216.0" promptText="Name" />
+      <TextField fx:id="txtCustName11" layoutX="741.0" layoutY="154.0" prefHeight="40.0" prefWidth="216.0" promptText="Address" />
+      <TextField fx:id="txtCustName111" layoutX="741.0" layoutY="203.0" prefHeight="40.0" prefWidth="216.0" promptText="Contact" />
+      <TextField fx:id="txtCustName1111" layoutX="741.0" layoutY="251.0" prefHeight="40.0" prefWidth="216.0" promptText="User ID" />
+    </children>
+</AnchorPane>
