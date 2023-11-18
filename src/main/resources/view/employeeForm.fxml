@@ -21,7 +21,7 @@
                 <TableColumn fx:id="colEmpContact" prefWidth="166.1331787109375" text="Contact" />
             </columns>
         </TableView>
-        <TextField fx:id="txtEmpId" alignment="CENTER" layoutX="396.0" layoutY="579.0" prefHeight="44.0" prefWidth="220.0" promptText="Employee ID" style="-fx-background-radius: 30; -fx-background-color: B8E3FF;" />
+        <TextField fx:id="txtEmpID" alignment="CENTER" layoutX="396.0" layoutY="579.0" prefHeight="44.0" prefWidth="220.0" promptText="Employee ID" style="-fx-background-radius: 30; -fx-background-color: B8E3FF;" />
         <JFXButton layoutX="642.0" layoutY="575.0" onAction="#btnEmpSave" prefHeight="26.0" prefWidth="79.0" styleClass="btn" text="Save" />
         <JFXButton layoutX="417.0" layoutY="657.0" onAction="#btnEmpUpdate" prefHeight="26.0" prefWidth="79.0" styleClass="btn" text="Update" />
         <JFXButton layoutX="191.0" layoutY="575.0" onAction="#btnEmpDelete" prefHeight="26.0" prefWidth="79.0" styleClass="btn" text="Delete" />

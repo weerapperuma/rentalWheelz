@@ -2,12 +2,14 @@ package lk.penguin.rentalWheelz.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import lk.penguin.rentalWheelz.util.Navigation;
 
 import java.io.IOException;
+import java.util.regex.Pattern;
 
 public class EmployeeFormController {
 
@@ -33,20 +35,21 @@ public class EmployeeFormController {
     private TableView<?> tblEmployee;
 
     @FXML
-    private TextField txtEmpId;
+    private TextField txtEmpID;
 
     @FXML
     void btnEmpAttendance(ActionEvent event) {
 
     }
 
+    public static String empID;
     @FXML
     void btnEmpClear(ActionEvent event) {
         clearFields();
     }
 
     private void clearFields() {
-        txtEmpId.clear();
+        txtEmpID.clear();
     }
 
     @FXML
@@ -61,8 +64,26 @@ public class EmployeeFormController {
 
     @FXML
     void btnEmpSave(ActionEvent event) throws IOException {
+        boolean isEmpSavedValidated=validateEmpSave();
+
        //Navigation.closePane();
-        Navigation.switchPaging(GlobalFormController.getInstance().pagingPane,"empSaveForm.fxml");
+        if(isEmpSavedValidated){
+            Navigation.switchPaging(GlobalFormController.getInstance().pagingPane,"empSaveForm.fxml");
+        }
+
+    }
+
+    private boolean validateEmpSave() {
+        String idText = txtEmpID.getText();
+//        boolean isCustomerIDValidated = Pattern.compile("[C][0-9]{3,}").matcher(idText).matches();
+        boolean isCustomerIDValidated = Pattern.matches("[E][0-9]{3,}", idText);
+        if (!isCustomerIDValidated) {
+
+            new Alert(Alert.AlertType.ERROR, "Invalid Customer ID!").show();
+            return false;
+        }
+        empID=idText;
+        return true;
     }
 
     @FXML

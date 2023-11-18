@@ -36,7 +36,7 @@ public class EmpSaveFormController {
 
     @FXML
     void btnEmpSaveSaveOnAction(ActionEvent event) {
-        String id=txtEmpID.getText();
+        String id= txtEmpID.getText();
         String name=txtEmpName.getText();
         String address = txtEmpAddress.getText();
         String contact = txtEmpContact.getText();
@@ -57,5 +57,7 @@ public class EmpSaveFormController {
             new Alert(Alert.AlertType.ERROR,e.getMessage()).show();
         }
     }
-
+    public void initialize(){
+        txtEmpID.setText(EmployeeFormController.empID);
+    }
 }
