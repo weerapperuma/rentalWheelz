@@ -4,29 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c177ce81-1648-4efd-a82d-1758e05564ce" name="Changes" comment="git comit 1">
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/penguin/rentalWheelz/controller/EmpSaveFormController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/penguin/rentalWheelz/dto/EmployeeDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/penguin/rentalWheelz/model/EmployeeModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/view/carForm.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/view/empSaveForm.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/penguin/rentalWheelz/AppInitializerWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/penguin/rentalWheelz/AppInitializerWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/penguin/rentalWheelz/controller/CustomerFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/penguin/rentalWheelz/controller/CustomerFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/penguin/rentalWheelz/controller/DashBoardFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/penguin/rentalWheelz/controller/DashBoardFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/penguin/rentalWheelz/controller/EmployeeFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/penguin/rentalWheelz/controller/EmployeeFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/penguin/rentalWheelz/controller/GlobalFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/penguin/rentalWheelz/controller/GlobalFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/penguin/rentalWheelz/controller/LoginPageFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/penguin/rentalWheelz/controller/LoginPageFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/penguin/rentalWheelz/controller/SupplierFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/penguin/rentalWheelz/controller/SupplierFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/penguin/rentalWheelz/controller/VehicleFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/penguin/rentalWheelz/controller/CarFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/penguin/rentalWheelz/util/Navigation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/penguin/rentalWheelz/util/Navigation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/bigButton.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/bigButton.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sql/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql/schema.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/customerForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/customerForm.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/employeeForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/employeeForm.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/supplierForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/supplierForm.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/vehicleForm.fxml" beforeDir="false" />
+    <list default="true" id="c177ce81-1648-4efd-a82d-1758e05564ce" name="Changes" comment="git add ui">
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/penguin/rentalWheelz/controller/EmpSaveFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/penguin/rentalWheelz/controller/EmpSaveFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/penguin/rentalWheelz/model/EmployeeModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/penguin/rentalWheelz/model/EmployeeModel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,7 +129,7 @@
       <workItem from="1700276839302" duration="20000" />
       <workItem from="1700286475572" duration="659000" />
       <workItem from="1700302945012" duration="4189000" />
-      <workItem from="1700310015401" duration="5953000" />
+      <workItem from="1700310015401" duration="8344000" />
     </task>
     <task id="LOCAL-00001" summary="git comit 1">
       <option name="closed" value="true" />
@@ -167,7 +147,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700073044639</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="git add ui">
+      <option name="closed" value="true" />
+      <created>1700317876523</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1700317876523</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,6 +163,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="git comit 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="git comit 1" />
+    <MESSAGE value="git add ui" />
+    <option name="LAST_COMMIT_MESSAGE" value="git add ui" />
   </component>
 </project>
