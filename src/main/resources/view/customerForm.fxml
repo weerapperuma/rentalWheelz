@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -8,31 +9,32 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="760.0" prefWidth="1055.0" style="-fx-background-radius: 20; -fx-background-color: white;" stylesheets="@../button.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.penguin.rentalWheelz.controller.CustomerFormController">
+<AnchorPane prefHeight="760.0" prefWidth="1055.0" style="-fx-background-radius: 20; -fx-background-color: #16558F;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.penguin.rentalWheelz.controller.CustomerFormController">
     <children>
-        <TableView layoutX="8.0" layoutY="321.0" prefHeight="435.0" prefWidth="1043.0">
+        <TableView fx:id="tblCustomer" layoutX="4.0" layoutY="55.0" prefHeight="357.0" prefWidth="1047.0" style="-fx-background-color: #B8E3FF; -fx-border-color: black;">
             <columns>
-                <TableColumn prefWidth="75.0" text="id" />
-                <TableColumn prefWidth="283.46666717529297" text="name" />
-                <TableColumn prefWidth="260.8000793457031" text="Address" />
-                <TableColumn prefWidth="41.86669921875" text="contact" />
-            <TableColumn prefWidth="557.333251953125" text="User Id" />
+                <TableColumn fx:id="colEmpID" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="colEmpName" prefWidth="174.39995574951172" text="Name" />
+                <TableColumn fx:id="colEmpEmail" prefWidth="185.60000610351562" text="Email" />
+                <TableColumn fx:id="colEmpPosition" prefWidth="143.7333221435547" text="Position" />
+                <TableColumn fx:id="colEmpAddress" prefWidth="298.666748046875" text="Address" />
+                <TableColumn fx:id="colEmpContact" prefWidth="166.1331787109375" text="Contact" />
             </columns>
         </TableView>
-        <TextField fx:id="txtCustName" layoutX="737.0" layoutY="21.0" prefHeight="40.0" prefWidth="216.0" promptText="ID number" />
-        <JFXButton layoutX="63.0" layoutY="65.0" onAction="#btnCustSave" prefHeight="34.0" prefWidth="87.0" styleClass="btn" text="Save" />
-        <JFXButton layoutX="61.0" layoutY="132.0" onAction="#btnCustUpdate" prefHeight="34.0" prefWidth="87.0" styleClass="btn" text="Update" />
-        <JFXButton layoutX="74.0" layoutY="203.0" onAction="#btnCustDelete" prefHeight="34.0" prefWidth="87.0" styleClass="btn" text="Delete" />
-        <JFXButton layoutX="303.0" layoutY="131.0" onAction="#btnCustClear" prefHeight="34.0" prefWidth="87.0" styleClass="btn" text="Clear" />
-      <Label layoutX="411.0" layoutY="12.0" prefHeight="45.0" prefWidth="288.0" styleClass="bigButton" text="Customer Manage" textFill="#1e00ff">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Label>
-      <JFXButton layoutX="306.0" layoutY="70.0" onAction="#btnCustClear" prefHeight="34.0" prefWidth="87.0" styleClass="btn" text="Search" />
-      <TextField fx:id="txtCustName1" layoutX="741.0" layoutY="105.0" prefHeight="40.0" prefWidth="216.0" promptText="Name" />
-      <TextField fx:id="txtCustName11" layoutX="741.0" layoutY="154.0" prefHeight="40.0" prefWidth="216.0" promptText="Address" />
-      <TextField fx:id="txtCustName111" layoutX="741.0" layoutY="203.0" prefHeight="40.0" prefWidth="216.0" promptText="Contact" />
-      <TextField fx:id="txtCustName1111" layoutX="741.0" layoutY="251.0" prefHeight="40.0" prefWidth="216.0" promptText="User ID" />
+        <TextField fx:id="txtCustId" alignment="CENTER" layoutX="396.0" layoutY="579.0" prefHeight="44.0" prefWidth="220.0" promptText="Customer ID" style="-fx-background-radius: 30; -fx-background-color: B8E3FF;" />
+        <JFXButton layoutX="642.0" layoutY="575.0" onAction="#btnCustSave" prefHeight="26.0" prefWidth="79.0" styleClass="btn" text="Save" />
+        <JFXButton layoutX="417.0" layoutY="657.0" onAction="#btnCustUpdate" prefHeight="26.0" prefWidth="79.0" styleClass="btn" text="Update" />
+        <JFXButton layoutX="191.0" layoutY="575.0" onAction="#btnCustDelete" prefHeight="26.0" prefWidth="79.0" styleClass="btn" text="Delete" />
+        <JFXButton layoutX="864.0" layoutY="683.0" onAction="#btnEmpClear" prefHeight="28.0" prefWidth="47.0" style="-fx-background-radius: 0; -fx-background-color: green;" text="Clear" />
+        <JFXButton layoutX="417.0" layoutY="472.0" onAction="#btnCustSearch" prefHeight="26.0" prefWidth="79.0" styleClass="btn" text="Search" />
+        <Label layoutX="414.0" layoutY="19.0" prefHeight="44.0" prefWidth="245.0" text="Customer Management">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
     </children>
+    <stylesheets>
+        <URL value="@../bigButton.css" />
+        <URL value="@../button.css" />
+    </stylesheets>
 </AnchorPane>

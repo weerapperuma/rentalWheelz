@@ -1,11 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="760.0" prefWidth="1055.0" style="-fx-background-radius: 20; -fx-background-color: white;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.penguin.rentalWheelz.controller.SupplierFormController">
+<AnchorPane prefHeight="760.0" prefWidth="1055.0" style="-fx-background-radius: 20; -fx-background-color: #16558F;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.penguin.rentalWheelz.controller.SupplierFormController">
    <children>
-      <Label layoutX="387.0" layoutY="74.0" prefHeight="18.0" prefWidth="322.0" text="Supplier Form" />
+      <TableView fx:id="tblSupplier" layoutX="4.0" layoutY="55.0" prefHeight="357.0" prefWidth="1047.0" style="-fx-background-color: #B8E3FF; -fx-border-color: black;">
+         <columns>
+            <TableColumn fx:id="colSupID" prefWidth="99.73331642150879" text="ID" />
+            <TableColumn fx:id="colSupName" prefWidth="232.26671600341797" text="Name" />
+            <TableColumn fx:id="colSupplierAvailableCar" prefWidth="205.06668090820312" text="Available Car" />
+            <TableColumn fx:id="colSupOrderID" prefWidth="209.33322143554688" text="Order ID" />
+            <TableColumn fx:id="colSupContact" prefWidth="297.0665283203125" text="Contact" />
+         </columns>
+      </TableView>
+      <TextField fx:id="txtSupId" alignment="CENTER" layoutX="396.0" layoutY="579.0" prefHeight="44.0" prefWidth="220.0" promptText="Customer ID" style="-fx-background-radius: 30; -fx-background-color: B8E3FF;" />
+      <JFXButton layoutX="642.0" layoutY="575.0" onAction="#btnSupSave" prefHeight="26.0" prefWidth="79.0" styleClass="btn" text="Save" />
+      <JFXButton layoutX="417.0" layoutY="657.0" onAction="#btnSupUpdate" prefHeight="26.0" prefWidth="79.0" styleClass="btn" text="Update" />
+      <JFXButton layoutX="191.0" layoutY="575.0" onAction="#btnSupDelete" prefHeight="26.0" prefWidth="79.0" styleClass="btn" text="Delete" />
+      <JFXButton layoutX="864.0" layoutY="683.0" onAction="#btnEmpClear" prefHeight="28.0" prefWidth="47.0" style="-fx-background-radius: 0; -fx-background-color: green;" text="Clear" />
+      <JFXButton layoutX="417.0" layoutY="472.0" onAction="#btnSupSearch" prefHeight="26.0" prefWidth="79.0" styleClass="btn" text="Search" />
+      <Label layoutX="414.0" layoutY="19.0" prefHeight="44.0" prefWidth="245.0" text="Supplier Management">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
    </children>
+   <stylesheets>
+      <URL value="@../bigButton.css" />
+      <URL value="@../button.css" />
+   </stylesheets>
 </AnchorPane>

@@ -8,6 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import lk.penguin.rentalWheelz.controller.GlobalFormController;
 
 import java.io.IOException;
 
@@ -33,5 +34,9 @@ public class Navigation {
         Parent root=loader.load();
         pane.getChildren().add(root);
 
+    }
+    public static void closePane(){
+        GlobalFormController.getInstance().pagingPane.getChildren().clear();
+        GlobalFormController.getInstance().pagingPane.setVisible(false);
     }
 }

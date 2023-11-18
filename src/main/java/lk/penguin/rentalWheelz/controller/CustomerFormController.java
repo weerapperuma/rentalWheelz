@@ -2,26 +2,35 @@ package lk.penguin.rentalWheelz.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 
 public class CustomerFormController {
 
     @FXML
-    private TextField textCustContact;
+    private TableColumn<?, ?> colEmpAddress;
 
     @FXML
-    private TextField txtCustAddress;
+    private TableColumn<?, ?> colEmpContact;
 
     @FXML
-    private TextField txtCustID;
+    private TableColumn<?, ?> colEmpEmail;
 
     @FXML
-    private TextField txtCustName;
+    private TableColumn<?, ?> colEmpID;
 
     @FXML
-    void btnCustClear(ActionEvent event) {
+    private TableColumn<?, ?> colEmpName;
 
-    }
+    @FXML
+    private TableColumn<?, ?> colEmpPosition;
+
+    @FXML
+    private TableView<?> tblCustomer;
+
+    @FXML
+    private TextField txtCustId;
 
     @FXML
     void btnCustDelete(ActionEvent event) {
@@ -34,7 +43,17 @@ public class CustomerFormController {
     }
 
     @FXML
+    void btnCustSearch(ActionEvent event) {
+
+    }
+
+    @FXML
     void btnCustUpdate(ActionEvent event) {
+
+    }
+
+    @FXML
+    void btnEmpClear(ActionEvent event) {
 
     }
 

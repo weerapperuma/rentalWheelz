@@ -13,8 +13,19 @@ import java.util.ResourceBundle;
 
 public class GlobalFormController implements Initializable {
 
+
     @FXML
-    private AnchorPane pagingPane;
+    public AnchorPane pagingPane;
+
+    private static GlobalFormController controller;
+
+    public GlobalFormController() {
+        controller = this;
+    }
+
+    public static GlobalFormController getInstance() {
+        return controller;
+    }
 
     @FXML
     void btnCustomerOnAction(ActionEvent event) throws IOException {
@@ -58,7 +69,7 @@ public class GlobalFormController implements Initializable {
 
     @FXML
     void btnVehicleOnAction(ActionEvent event) throws IOException {
-        Navigation.switchPaging(pagingPane,"vehicleForm.fxml");
+        Navigation.switchPaging(pagingPane,"carForm.fxml");
     }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

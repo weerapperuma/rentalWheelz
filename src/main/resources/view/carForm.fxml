@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="760.0" prefWidth="1055.0" style="-fx-background-radius: 20; -fx-background-color: #16558F;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.penguin.rentalWheelz.controller.CarFormController">
+   <children>
+      <TableView fx:id="tblSupplier" layoutX="4.0" layoutY="55.0" prefHeight="357.0" prefWidth="1047.0" style="-fx-background-color: #B8E3FF; -fx-border-color: black;">
+         <columns>
+            <TableColumn fx:id="colCarID" prefWidth="280.00005531311035" text="ID" />
+            <TableColumn fx:id="colCarName" prefWidth="553.5998916625977" text="Name" />
+            <TableColumn fx:id="colCarStatus" prefWidth="210.13351440429688" text="Status" />
+         </columns>
+      </TableView>
+      <TextField fx:id="txtCarId" alignment="CENTER" layoutX="396.0" layoutY="579.0" prefHeight="44.0" prefWidth="220.0" promptText="Car ID" style="-fx-background-radius: 30; -fx-background-color: B8E3FF;" />
+      <JFXButton layoutX="642.0" layoutY="575.0" onAction="#btnCarSave" prefHeight="26.0" prefWidth="79.0" styleClass="btn" text="Save" />
+      <JFXButton layoutX="417.0" layoutY="657.0" onAction="#btnCarUpdate" prefHeight="26.0" prefWidth="79.0" styleClass="btn" text="Update" />
+      <JFXButton layoutX="191.0" layoutY="575.0" onAction="#btnCarDelete" prefHeight="26.0" prefWidth="79.0" styleClass="btn" text="Delete" />
+      <JFXButton layoutX="864.0" layoutY="683.0" onAction="#btnEmpClear" prefHeight="28.0" prefWidth="47.0" style="-fx-background-radius: 0; -fx-background-color: green;" text="Clear" />
+      <JFXButton layoutX="417.0" layoutY="472.0" onAction="#btnCarSearch" prefHeight="26.0" prefWidth="79.0" styleClass="btn" text="Search" />
+      <Label layoutX="414.0" layoutY="19.0" prefHeight="44.0" prefWidth="245.0" text="Car Management">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+   </children>
+   <stylesheets>
+      <URL value="@../bigButton.css" />
+      <URL value="@../button.css" />
+   </stylesheets>
+</AnchorPane>

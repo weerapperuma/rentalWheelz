@@ -5,6 +5,9 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import lk.penguin.rentalWheelz.util.Navigation;
+
+import java.io.IOException;
 
 public class EmployeeFormController {
 
@@ -30,35 +33,24 @@ public class EmployeeFormController {
     private TableView<?> tblEmployee;
 
     @FXML
-    private TextField txtEmpAddress;
-
-    @FXML
-    private TextField txtEmpContact;
-
-    @FXML
-    private TextField txtEmpEmail;
-
-    @FXML
     private TextField txtEmpId;
 
     @FXML
-    private TextField txtEmpName;
+    void btnEmpAttendance(ActionEvent event) {
 
-    @FXML
-    private TextField txtEmpPosition;
+    }
 
     @FXML
     void btnEmpClear(ActionEvent event) {
+        clearFields();
+    }
 
+    private void clearFields() {
+        txtEmpId.clear();
     }
 
     @FXML
     void btnEmpDelete(ActionEvent event) {
-
-    }
-
-    @FXML
-    void btnEmpEmployee(ActionEvent event) {
 
     }
 
@@ -68,7 +60,13 @@ public class EmployeeFormController {
     }
 
     @FXML
-    void btnEmpSave(ActionEvent event) {
+    void btnEmpSave(ActionEvent event) throws IOException {
+       //Navigation.closePane();
+        Navigation.switchPaging(GlobalFormController.getInstance().pagingPane,"empSaveForm.fxml");
+    }
+
+    @FXML
+    void btnEmpSearch(ActionEvent event) {
 
     }
 
