@@ -39,4 +39,12 @@ public class Navigation {
         GlobalFormController.getInstance().pagingPane.getChildren().clear();
         GlobalFormController.getInstance().pagingPane.setVisible(false);
     }
+    public static void switchPaging2(Pane pane, String path) throws IOException {
+        //pane.getChildren().clear();
+        FXMLLoader loader = new FXMLLoader(Navigation.class.getResource("/view/" + path));
+
+        Parent root=loader.load();
+        pane.getChildren().add(root);
+
+    }
 }

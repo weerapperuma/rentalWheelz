@@ -1,18 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="760.0" prefWidth="1055.0" style="-fx-background-radius: 20; -fx-background-color: grey;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.penguin.rentalWheelz.controller.EmpSaveFormController">
+<AnchorPane prefHeight="430.0" prefWidth="689.0" style="-fx-background-radius: 40; -fx-background-color: #4F7471;" stylesheets="@../button.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.penguin.rentalWheelz.controller.EmpSaveFormController">
    <children>
-      <TextField fx:id="txtEmpName" layoutX="373.0" layoutY="136.0" prefHeight="61.0" prefWidth="291.0" promptText="Name" style="-fx-background-color: white; -fx-background-radius: 20;" />
-      <TextField fx:id="txtEmpEmail" layoutX="374.0" layoutY="207.0" prefHeight="61.0" prefWidth="291.0" promptText="Email" style="-fx-background-color: white; -fx-background-radius: 20;" />
-      <TextField fx:id="txtEmpPosition" layoutX="377.0" layoutY="288.0" prefHeight="61.0" prefWidth="291.0" promptText="Position" style="-fx-background-color: white; -fx-background-radius: 20;" />
-      <TextField fx:id="txtEmpAddress" layoutX="377.0" layoutY="358.0" prefHeight="61.0" prefWidth="291.0" promptText="Address" style="-fx-background-color: white; -fx-background-radius: 20;" />
-      <TextField fx:id="txtEmpContact" layoutX="376.0" layoutY="448.0" prefHeight="61.0" prefWidth="291.0" promptText="Contact" style="-fx-background-color: white; -fx-background-radius: 20;" />
-      <TextField fx:id="txtEmpID" layoutX="373.0" layoutY="52.0" prefHeight="61.0" prefWidth="291.0" promptText="ID" style="-fx-background-color: white; -fx-background-radius: 20;" />
-      <JFXButton layoutX="428.0" layoutY="637.0" onAction="#btnEmpSaveSaveOnAction" text="Save" />
-      <JFXButton layoutX="528.0" layoutY="644.0" onAction="#btnEmpSaveBack" text="Back" />
+      <TextField fx:id="txtEmpName" layoutX="404.0" layoutY="106.0" prefHeight="40.0" prefWidth="218.0" promptText="riddler" style="-fx-background-color: white; -fx-background-radius: 20;" />
+      <TextField fx:id="txtEmpEmail" layoutX="74.0" layoutY="188.0" prefHeight="40.0" prefWidth="218.0" promptText="riddler@gmail.com" style="-fx-background-color: white; -fx-background-radius: 20;" />
+      <TextField fx:id="txtEmpPosition" layoutX="403.0" layoutY="188.0" prefHeight="40.0" prefWidth="217.0" promptText="investigator" style="-fx-background-color: white; -fx-background-radius: 20;" />
+      <TextField fx:id="txtEmpAddress" layoutX="75.0" layoutY="271.0" prefHeight="40.0" prefWidth="219.0" promptText="Gotham" style="-fx-background-color: white; -fx-background-radius: 20;" />
+      <TextField fx:id="txtEmpContact" layoutX="406.0" layoutY="269.0" prefHeight="40.0" prefWidth="211.0" promptText="Contact" style="-fx-background-color: white; -fx-background-radius: 20;" />
+      <TextField fx:id="txtEmpID" layoutX="72.0" layoutY="108.0" prefHeight="40.0" prefWidth="218.0" promptText="E001" style="-fx-background-color: white; -fx-background-radius: 20;" />
+      <JFXButton layoutX="264.0" layoutY="348.0" onAction="#btnEmpSaveSaveOnAction" prefHeight="54.0" prefWidth="128.0" styleClass="btn" text="Save">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></JFXButton>
+      <JFXButton layoutX="140.0" layoutY="372.0" onAction="#btnEmpSaveBack" text="Back" />
+      <Label fx:id="txtEmpIdShow" layoutX="527.0" layoutY="21.0" prefHeight="42.0" prefWidth="81.0" text="Label">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></Label>
+      <Label layoutX="234.0" layoutY="13.0" prefHeight="53.0" prefWidth="182.0" text="Employee Save">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="537.0" layoutY="369.0" onAction="#btnEmpSaveClear" prefHeight="32.0" prefWidth="62.0" text="Clear">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </JFXButton>
+      <Text layoutX="87.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Input valid ID" wrappingWidth="143.3164005279541" />
+      <Text layoutX="90.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Input valid Email" wrappingWidth="143.3164005279541" />
+      <Text layoutX="88.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Input valid Email" wrappingWidth="143.3164005279541" />
+      <Text layoutX="420.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Input valid Name" wrappingWidth="143.3164005279541" />
+      <Text layoutX="418.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Input valid Position" wrappingWidth="143.3164005279541" />
+      <Text layoutX="420.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact Details" wrappingWidth="143.3164005279541" />
    </children>
 </AnchorPane>

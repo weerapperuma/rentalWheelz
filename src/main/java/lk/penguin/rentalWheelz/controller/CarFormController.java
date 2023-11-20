@@ -5,6 +5,9 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import lk.penguin.rentalWheelz.util.Navigation;
+
+import java.io.IOException;
 
 public class CarFormController {
 
@@ -29,8 +32,8 @@ public class CarFormController {
     }
 
     @FXML
-    void btnCarSave(ActionEvent event) {
-
+    void btnCarSave(ActionEvent event) throws IOException {
+        Navigation.switchPaging2(GlobalFormController.getInstance().pagingPane, "carSaveForm.fxml");
     }
 
     @FXML

@@ -1,14 +1,22 @@
 package lk.penguin.rentalWheelz.controller;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
+import lk.penguin.rentalWheelz.dto.EmployeeDto;
+import lk.penguin.rentalWheelz.dto.tm.EmployeeTM;
+import lk.penguin.rentalWheelz.model.EmployeeModel;
 import lk.penguin.rentalWheelz.util.Navigation;
 
 import java.io.IOException;
+import java.sql.SQLException;
+import java.util.List;
 import java.util.regex.Pattern;
 
 public class EmployeeFormController {
@@ -32,7 +40,7 @@ public class EmployeeFormController {
     private TableColumn<?, ?> colEmpPosition;
 
     @FXML
-    private TableView<?> tblEmployee;
+    private TableView<EmployeeTM> tblEmployee;
 
     @FXML
     private TextField txtEmpID;
@@ -41,6 +49,7 @@ public class EmployeeFormController {
     void btnEmpAttendance(ActionEvent event) {
 
     }
+
 
     public static String empID;
     @FXML
@@ -54,6 +63,26 @@ public class EmployeeFormController {
 
     @FXML
     void btnEmpDelete(ActionEvent event) {
+        boolean isEmpSavedValidated=validateEmployee();
+
+        //Navigation.closePane();
+        if(isEmpSavedValidated){
+            String id=txtEmpID.getText();
+            EmployeeModel model=new EmployeeModel();
+
+            try {
+                boolean isDeleted = model.deleteEmployee(id);
+                if(isDeleted){
+                    new Alert(Alert.AlertType.CONFIRMATION,"Employee Deleted Successfully").show();
+                    loadAllEmployees();
+                }
+            } catch (SQLException e) {
+                new Alert(Alert.AlertType.ERROR,e.getMessage()).show();
+            }
+        }
+
+
+
 
     }
 
@@ -64,22 +93,21 @@ public class EmployeeFormController {
 
     @FXML
     void btnEmpSave(ActionEvent event) throws IOException {
-        boolean isEmpSavedValidated=validateEmpSave();
+        boolean isEmployeeValidated=validateEmployee();
 
        //Navigation.closePane();
-        if(isEmpSavedValidated){
-            Navigation.switchPaging(GlobalFormController.getInstance().pagingPane,"empSaveForm.fxml");
+        if(isEmployeeValidated){
+            Navigation.switchPaging2(GlobalFormController.getInstance().pagingPane,"empSaveForm.fxml");
         }
-
     }
 
-    private boolean validateEmpSave() {
+    private boolean validateEmployee() {
         String idText = txtEmpID.getText();
-//        boolean isCustomerIDValidated = Pattern.compile("[C][0-9]{3,}").matcher(idText).matches();
-        boolean isCustomerIDValidated = Pattern.matches("[E][0-9]{3,}", idText);
-        if (!isCustomerIDValidated) {
+//        boolean isEmployeeIDValidated = Pattern.compile("[C][0-9]{3,}").matcher(idText).matches();
+        boolean isEmployeeIDValidated = Pattern.matches("[E][0-9]{3,}", idText);
+        if (!isEmployeeIDValidated) {
 
-            new Alert(Alert.AlertType.ERROR, "Invalid Customer ID!").show();
+            new Alert(Alert.AlertType.ERROR, "Invalid Employee ID!").show();
             return false;
         }
         empID=idText;
@@ -88,12 +116,46 @@ public class EmployeeFormController {
 
     @FXML
     void btnEmpSearch(ActionEvent event) {
-
+       // boolean
     }
 
     @FXML
     void btnEmpUpdate(ActionEvent event) {
 
+    }
+    public void initialize(){
+        setCellValueFactory();
+        loadAllEmployees();
+    }
+
+    public void loadAllEmployees() {
+        EmployeeModel model=new EmployeeModel();
+try {
+    ObservableList<EmployeeTM> oblist = FXCollections.observableArrayList();
+    List<EmployeeDto> list = model.getAllEmployees();
+    for (EmployeeDto dto : list) {
+        EmployeeTM employeeTM = new EmployeeTM(dto.getEmpId(),
+                dto.getEmpName(),
+                dto.getEmail(),
+                dto.getPosition(),
+                dto.getAddress(),
+                dto.getContact()
+        );
+        oblist.add(employeeTM);
+    }
+    tblEmployee.setItems(oblist);
+}catch (Exception e){
+    System.out.println(e.getMessage());
+}
+    }
+
+    private void setCellValueFactory() {
+        colEmpID.setCellValueFactory(new PropertyValueFactory<>("empId"));
+        colEmpName.setCellValueFactory(new PropertyValueFactory<>("empName"));
+        colEmpEmail.setCellValueFactory(new PropertyValueFactory<>("empEmail"));
+        colEmpPosition.setCellValueFactory(new PropertyValueFactory<>("empPosition"));
+        colEmpAddress.setCellValueFactory(new PropertyValueFactory<>("empAddress"));
+        colEmpContact.setCellValueFactory(new PropertyValueFactory<>("empContact"));
     }
 
 }

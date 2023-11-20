@@ -5,9 +5,33 @@ import lk.penguin.rentalWheelz.dto.EmployeeDto;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class EmployeeModel {
+
+
+    public List<EmployeeDto> getAllEmployees() throws SQLException {
+        Connection connection = DbConnection.getInstance().getConnection();
+        String sql = "SELECT * FROM employee";
+        PreparedStatement pstm = connection.prepareStatement(sql);
+        ResultSet resultSet = pstm.executeQuery();
+        List<EmployeeDto> list = new ArrayList<>();
+        while (resultSet.next()){
+            list.add(new EmployeeDto(
+                    resultSet.getString(1),
+                    resultSet.getString(2),
+                    resultSet.getString(3),
+                    resultSet.getString(4),
+                    resultSet.getString(5),
+                    resultSet.getString(6)
+            ));
+        }
+        return list;
+    };
+
     public boolean savedEmployee(EmployeeDto dto) throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
         String sql = "INSERT INTO employee VALUES(?,?,?,?,?,?)";
@@ -23,5 +47,15 @@ public class EmployeeModel {
 
         int i = pstm.executeUpdate();
         return(i>0);
+    }
+
+    public boolean deleteEmployee(String id) throws SQLException {
+        Connection connection=DbConnection.getInstance().getConnection();
+        String sql="DELETE FROM employee WHERE emp_id=?";
+        PreparedStatement pstm = connection.prepareStatement(sql);
+        pstm.setString(1,id);
+
+        int i = pstm.executeUpdate();
+        return (i>0);
     }
 }
