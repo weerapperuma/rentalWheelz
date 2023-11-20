@@ -65,7 +65,7 @@ public class EmpSaveFormController {
 
             if(isSaved){
                 new Alert(Alert.AlertType.CONFIRMATION,"Employee Saved Successfully").show();
-                //loadAllEmployees();
+                //EmployeeFormController.loadAllEmployees();
             }
         } catch (SQLException e) {
             new Alert(Alert.AlertType.ERROR,e.getMessage()).show();

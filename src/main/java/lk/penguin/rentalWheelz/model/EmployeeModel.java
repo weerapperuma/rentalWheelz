@@ -58,4 +58,45 @@ public class EmployeeModel {
         int i = pstm.executeUpdate();
         return (i>0);
     }
+
+    public boolean updateEmployee(final EmployeeDto dto) throws SQLException {
+        Connection connection = DbConnection.getInstance().getConnection();
+
+        String sql="UPDATE employee SET emp_id=?,e_name=?,email=?,position=?,address=?,contact=? WHERE emp_id=?";
+
+        PreparedStatement pstm = connection.prepareStatement(sql);
+
+        pstm.setString(1,dto.getEmpId());
+        pstm.setString(2,dto.getEmpName());
+        pstm.setString(3,dto.getEmail());
+        pstm.setString(4,dto.getPosition());
+        pstm.setString(5,dto.getAddress());
+        pstm.setString(6,dto.getContact());
+        pstm.setString(7,dto.getEmpId());
+
+        return pstm.executeUpdate()>0;
+    }
+
+    public EmployeeDto searchEmployee(String id) throws SQLException {
+        Connection connection = DbConnection.getInstance().getConnection();
+        String sql="SELECT * FROM employee WHERE emp_id=?";
+
+        PreparedStatement pstm = connection.prepareStatement(sql);
+        pstm.setString(1,id);
+
+        ResultSet resultSet = pstm.executeQuery();
+
+        EmployeeDto dto=null;
+        if(resultSet.next()){
+            String empId=resultSet.getString(1);
+            String empName=resultSet.getString(2);
+            String email=resultSet.getString(3);
+            String position=resultSet.getString(4);
+            String address=resultSet.getString(5);
+            String contact=resultSet.getString(6);
+
+            dto=new EmployeeDto(empId,empName,email,position,address,contact);
+        }
+        return dto;
+    }
 }

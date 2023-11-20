@@ -115,20 +115,32 @@ public class EmployeeFormController {
     }
 
     @FXML
-    void btnEmpSearch(ActionEvent event) {
-       // boolean
+    void btnEmpSearch(ActionEvent event) throws IOException {
+        boolean isEmployeeValidated=validateEmployee();
+
+        //Navigation.closePane();
+        if(isEmployeeValidated){
+            //var model=new EmployeeModel();
+            Navigation.switchPaging2(GlobalFormController.getInstance().pagingPane,"employeeSearchForm.fxml");
+        }
     }
 
     @FXML
-    void btnEmpUpdate(ActionEvent event) {
+    void btnEmpUpdate(ActionEvent event) throws IOException {
+        boolean isEmployeeValidated=validateEmployee();
 
+        //Navigation.closePane();
+        if(isEmployeeValidated){
+            //var model=new EmployeeModel();
+            Navigation.switchPaging2(GlobalFormController.getInstance().pagingPane,"employeeSearchForm.fxml");
+        }
     }
     public void initialize(){
         setCellValueFactory();
         loadAllEmployees();
     }
 
-    public void loadAllEmployees() {
+    private void loadAllEmployees() {
         EmployeeModel model=new EmployeeModel();
 try {
     ObservableList<EmployeeTM> oblist = FXCollections.observableArrayList();
