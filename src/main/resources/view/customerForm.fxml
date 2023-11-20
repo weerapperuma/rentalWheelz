@@ -13,12 +13,11 @@
     <children>
         <TableView fx:id="tblCustomer" layoutX="4.0" layoutY="55.0" prefHeight="357.0" prefWidth="1047.0" style="-fx-background-color: #B8E3FF; -fx-border-color: black;">
             <columns>
-                <TableColumn fx:id="colEmpID" prefWidth="75.0" text="ID" />
-                <TableColumn fx:id="colEmpName" prefWidth="174.39995574951172" text="Name" />
-                <TableColumn fx:id="colEmpEmail" prefWidth="185.60000610351562" text="Email" />
-                <TableColumn fx:id="colEmpPosition" prefWidth="143.7333221435547" text="Position" />
-                <TableColumn fx:id="colEmpAddress" prefWidth="298.666748046875" text="Address" />
-                <TableColumn fx:id="colEmpContact" prefWidth="166.1331787109375" text="Contact" />
+                <TableColumn fx:id="colCustID" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="colCustName" prefWidth="174.39995574951172" text="Name" />
+                <TableColumn fx:id="colCustAddress" prefWidth="185.60000610351562" text="Address" />
+                <TableColumn fx:id="colCustContact" prefWidth="298.666748046875" text="Contact" />
+            <TableColumn fx:id="colCustUserID" prefWidth="298.666748046875" text="User ID" />
             </columns>
         </TableView>
         <TextField fx:id="txtCustId" alignment="CENTER" layoutX="396.0" layoutY="579.0" prefHeight="44.0" prefWidth="220.0" promptText="Customer ID" style="-fx-background-radius: 30; -fx-background-color: B8E3FF;" />

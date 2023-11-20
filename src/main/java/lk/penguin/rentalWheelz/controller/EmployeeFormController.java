@@ -80,10 +80,6 @@ public class EmployeeFormController {
                 new Alert(Alert.AlertType.ERROR,e.getMessage()).show();
             }
         }
-
-
-
-
     }
 
     @FXML
@@ -142,23 +138,23 @@ public class EmployeeFormController {
 
     private void loadAllEmployees() {
         EmployeeModel model=new EmployeeModel();
-try {
-    ObservableList<EmployeeTM> oblist = FXCollections.observableArrayList();
-    List<EmployeeDto> list = model.getAllEmployees();
-    for (EmployeeDto dto : list) {
-        EmployeeTM employeeTM = new EmployeeTM(dto.getEmpId(),
-                dto.getEmpName(),
-                dto.getEmail(),
-                dto.getPosition(),
-                dto.getAddress(),
-                dto.getContact()
-        );
-        oblist.add(employeeTM);
-    }
-    tblEmployee.setItems(oblist);
-}catch (Exception e){
+    try {
+      ObservableList<EmployeeTM> oblist = FXCollections.observableArrayList();
+      List<EmployeeDto> list = model.getAllEmployees();
+        for (EmployeeDto dto : list) {
+            EmployeeTM employeeTM = new EmployeeTM(dto.getEmpId(),
+                    dto.getEmpName(),
+                    dto.getEmail(),
+                    dto.getPosition(),
+                    dto.getAddress(),
+                    dto.getContact()
+            );
+            oblist.add(employeeTM);
+        }
+        tblEmployee.setItems(oblist);
+    }catch (Exception e){
     System.out.println(e.getMessage());
-}
+    }
     }
 
     private void setCellValueFactory() {

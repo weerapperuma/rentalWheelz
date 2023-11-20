@@ -1,6 +1,7 @@
 package lk.penguin.rentalWheelz.model;
 
 import lk.penguin.rentalWheelz.db.DbConnection;
+import lk.penguin.rentalWheelz.dto.CustomerDto;
 import lk.penguin.rentalWheelz.dto.EmployeeDto;
 
 import java.sql.Connection;
@@ -99,4 +100,5 @@ public class EmployeeModel {
         }
         return dto;
     }
+
 }
