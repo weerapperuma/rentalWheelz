@@ -58,8 +58,8 @@ public class GlobalFormController implements Initializable {
     }
 
     @FXML
-    void btnRentOnAction(ActionEvent event) {
-
+    void btnRentOnAction(ActionEvent event) throws IOException {
+        Navigation.switchPaging(pagingPane,"rentForm.fxml");
     }
 
     @FXML

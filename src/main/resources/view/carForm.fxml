@@ -29,6 +29,7 @@
             <Font name="System Bold" size="20.0" />
          </font>
       </Label>
+      <JFXButton layoutX="856.0" layoutY="26.0" onAction="#btnCustPrint" prefHeight="28.0" prefWidth="47.0" style="-fx-background-radius: 0; -fx-background-color: green;" text="Print" />
    </children>
    <stylesheets>
       <URL value="@../bigButton.css" />

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="760.0" prefWidth="1055.0" style="-fx-background-radius: 20; -fx-background-color: white;" stylesheets="@../button.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.penguin.rentalWheelz.controller.RentFormController">
+    <children>
+        <TableView fx:id="tblEmployee" layoutX="5.0" layoutY="390.0" prefHeight="365.0" prefWidth="1046.0">
+            <columns>
+                <TableColumn fx:id="colEmpID" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="colEmpName" prefWidth="174.39995574951172" text="Customer ID" />
+                <TableColumn fx:id="colEmpEmail" prefWidth="203.46665954589844" text="Amount" />
+                <TableColumn fx:id="colEmpPosition" prefWidth="362.13323974609375" text="Starting Day" />
+                <TableColumn fx:id="colEmpAddress" prefWidth="229.5999755859375" text="Ending Day" />
+            </columns>
+        </TableView>
+        <TextField fx:id="txtRentAmount" layoutX="78.0" layoutY="280.0" promptText="Rent fee" style="-fx-background-radius: 5;" />
+        <TextField fx:id="txtRentCustId" layoutX="310.0" layoutY="147.0" promptText="Customer ID" style="-fx-background-radius: 5;" />
+        <TextField fx:id="txtRentEndingDay" layoutX="60.0" layoutY="147.0" promptText="Ending day" style="-fx-background-radius: 5;" />
+        <TextField fx:id="txtRentStartingDay" layoutX="92.0" layoutY="329.0" promptText="Starting Day" style="-fx-background-radius: 5;" />
+        <JFXButton layoutX="738.0" layoutY="177.0" onAction="#btnRentSave" prefHeight="26.0" prefWidth="79.0" text="Save" />
+        <JFXButton layoutX="841.0" layoutY="267.0" onAction="#btnRentUpdate" prefHeight="26.0" prefWidth="79.0" text="Update" />
+        <JFXButton layoutX="697.0" layoutY="280.0" onAction="#btnRentDelete" prefHeight="26.0" prefWidth="79.0" text="Delete" />
+        <JFXButton buttonType="RAISED" layoutX="594.0" layoutY="160.0" onAction="#btnRentClear" prefHeight="26.0" prefWidth="79.0" text="Clear" />
+        <JFXButton layoutX="779.0" layoutY="205.0" onAction="#btnRentSupOrder" prefHeight="26.0" prefWidth="218.0" text="Supplier Order" />
+        <TextField fx:id="txtRentTotal" layoutX="64.0" layoutY="205.0" promptText="Total Amount" style="-fx-background-radius: 5;" />
+        <JFXButton layoutX="589.0" layoutY="238.0" onAction="#btnRentAddToCart" prefHeight="26.0" prefWidth="93.0" text="Add to cart" />
+        <TextField fx:id="txtRentCarId" layoutX="329.0" layoutY="253.0" promptText="Car Id" style="-fx-background-radius: 5;" />
+        <Label layoutX="357.0" layoutY="14.0" prefHeight="66.0" prefWidth="424.0" styleClass="title-bar" text="Rent Management" textAlignment="CENTER">
+            <font>
+                <Font name="Gadugi Bold" size="45.0" />
+            </font>
+        </Label>
+        <Label fx:id="txtRentId" layoutX="781.0" layoutY="34.0" prefHeight="26.0" prefWidth="138.0" />
+    </children>
+</AnchorPane>

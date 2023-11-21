@@ -24,13 +24,14 @@
         <JFXButton layoutX="642.0" layoutY="575.0" onAction="#btnCustSave" prefHeight="26.0" prefWidth="79.0" styleClass="btn" text="Save" />
         <JFXButton layoutX="417.0" layoutY="657.0" onAction="#btnCustUpdate" prefHeight="26.0" prefWidth="79.0" styleClass="btn" text="Update" />
         <JFXButton layoutX="191.0" layoutY="575.0" onAction="#btnCustDelete" prefHeight="26.0" prefWidth="79.0" styleClass="btn" text="Delete" />
-        <JFXButton layoutX="864.0" layoutY="683.0" onAction="#btnEmpClear" prefHeight="28.0" prefWidth="47.0" style="-fx-background-radius: 0; -fx-background-color: green;" text="Clear" />
+        <JFXButton layoutX="887.0" layoutY="683.0" onAction="#btnEmpClear" prefHeight="28.0" prefWidth="47.0" style="-fx-background-radius: 0; -fx-background-color: green;" text="Clear" />
         <JFXButton layoutX="417.0" layoutY="472.0" onAction="#btnCustSearch" prefHeight="26.0" prefWidth="79.0" styleClass="btn" text="Search" />
         <Label layoutX="414.0" layoutY="19.0" prefHeight="44.0" prefWidth="245.0" text="Customer Management">
             <font>
                 <Font name="System Bold" size="20.0" />
             </font>
         </Label>
+      <JFXButton layoutX="901.0" layoutY="27.0" onAction="#btnCustPrint" prefHeight="28.0" prefWidth="47.0" style="-fx-background-radius: 0; -fx-background-color: green;" text="Print" />
     </children>
     <stylesheets>
         <URL value="@../bigButton.css" />

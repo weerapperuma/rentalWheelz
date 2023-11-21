@@ -9,6 +9,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import lk.penguin.rentalWheelz.db.DbConnection;
 import lk.penguin.rentalWheelz.dto.CustomerDto;
 import lk.penguin.rentalWheelz.dto.EmployeeDto;
 import lk.penguin.rentalWheelz.dto.tm.CustomerTM;
@@ -16,9 +17,15 @@ import lk.penguin.rentalWheelz.dto.tm.EmployeeTM;
 import lk.penguin.rentalWheelz.model.CustomerModel;
 import lk.penguin.rentalWheelz.model.EmployeeModel;
 import lk.penguin.rentalWheelz.util.Navigation;
+import net.sf.jasperreports.engine.*;
+import net.sf.jasperreports.engine.design.JasperDesign;
+import net.sf.jasperreports.engine.xml.JRXmlLoader;
+import net.sf.jasperreports.view.JasperViewer;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.sql.SQLException;
+import java.util.HashMap;
 import java.util.List;
 import java.util.regex.Pattern;
 
@@ -151,6 +158,19 @@ public class CustomerFormController {
     @FXML
     void btnEmpClear(ActionEvent event) {
         txtCustId.clear();
+    }
+
+    @FXML
+    void btnCustPrint(ActionEvent event) throws JRException, SQLException {
+        //HashMap hashMap=new HashMap<>();
+        //hashMap.put("employee","E001");
+
+        InputStream resourceAsStream=getClass().getResourceAsStream("/reports/Blank_A4_3.jrxml");
+        JasperDesign load= JRXmlLoader.load(resourceAsStream);
+        JasperReport jasperReport = JasperCompileManager.compileReport(load);
+        JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, null, DbConnection.getInstance().getConnection());
+        JasperViewer.viewReport(jasperPrint,false);
+        JasperExportManager.exportReportToPdfFile(jasperPrint,"C:\\Users\\sdwee\\OneDrive\\Documents\\whatsapp\\newreport3.pdf");
     }
 
 }
