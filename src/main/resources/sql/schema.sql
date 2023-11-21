@@ -94,7 +94,7 @@ CREATE TABLE rent_detail (
 insert into employee values ('E001','riddler','riddler@gotham.com','manager','new york','875467');
 
 insert into user values ('U001','riddler','123','E001');
-INSERT INTO car VALUES ('C001','luxury','available');
-INSERT INTO customer VALUES ('CU001','LOKITHA','walgama','711018201','U001');
+INSERT INTO car VALUES ('V001','luxury','available');
+INSERT INTO customer VALUES ('C001','LOKITHA','walgama','711018201','U001');
 insert into employee values ('E002','babara','babara@gotham.com','dealer','new york','846767');
 INSERT INTO user VALUES ('U002','babara','345','E002');
