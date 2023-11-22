@@ -9,17 +9,10 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
-import lk.penguin.rentalWheelz.db.DbConnection;
 import lk.penguin.rentalWheelz.dto.CarDto;
-import lk.penguin.rentalWheelz.dto.CustomerDto;
-import lk.penguin.rentalWheelz.dto.EmployeeDto;
-import lk.penguin.rentalWheelz.dto.tm.EmployeeTM;
+import lk.penguin.rentalWheelz.dto.tm.CarTM;
 import lk.penguin.rentalWheelz.model.CarModel;
-import lk.penguin.rentalWheelz.model.CustomerModel;
-import lk.penguin.rentalWheelz.model.EmployeeModel;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.regex.Pattern;

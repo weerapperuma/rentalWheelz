@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -37,5 +39,7 @@
             </font>
         </Label>
         <Label fx:id="txtRentId" layoutX="781.0" layoutY="34.0" prefHeight="26.0" prefWidth="138.0" />
+      <JFXComboBox fx:id="cmbCustomerId" layoutX="329.0" layoutY="306.0" prefHeight="26.0" prefWidth="158.0" />
+      <DatePicker fx:id="dpEndingDate" layoutX="516.0" layoutY="320.0" onAction="#dpEndingDayOnAction" />
     </children>
 </AnchorPane>

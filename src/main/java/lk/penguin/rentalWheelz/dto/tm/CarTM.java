@@ -1,4 +1,4 @@
-package lk.penguin.rentalWheelz.controller;
+package lk.penguin.rentalWheelz.dto.tm;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

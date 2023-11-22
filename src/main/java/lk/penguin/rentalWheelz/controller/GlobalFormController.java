@@ -43,8 +43,8 @@ public class GlobalFormController implements Initializable {
     }
 
     @FXML
-    void btnHomeOnAction(ActionEvent event) {
-
+    void btnHomeOnAction(ActionEvent event) throws IOException {
+        Navigation.switchPaging(pagingPane,"dashBoardForm.fxml");
     }
 
     @FXML

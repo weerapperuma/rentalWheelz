@@ -1,20 +1,22 @@
 package lk.penguin.rentalWheelz.controller;
 
+import com.jfoenix.controls.JFXComboBox;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.fxml.Initializable;
+import javafx.scene.control.*;
 import lk.penguin.rentalWheelz.dto.RentDto;
 import lk.penguin.rentalWheelz.model.CarRentModel;
+import lk.penguin.rentalWheelz.model.RentModel;
 
+import java.net.URL;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.ResourceBundle;
 
 
-public class RentFormController {
+public class RentFormController implements Initializable {
 
 
     @FXML
@@ -45,9 +47,6 @@ public class RentFormController {
     private TextField txtRentCustId;
 
     @FXML
-    private TextField txtRentEndingDay;
-
-    @FXML
     private Label txtRentId;
 
     @FXML
@@ -55,7 +54,17 @@ public class RentFormController {
 
     @FXML
     private TextField txtRentTotal;
+
+    @FXML
+    private DatePicker dpEndingDate;
+
+
+    @FXML
+    private JFXComboBox<String> cmbCustomerId;
+
+    RentModel rentModel = new RentModel();
     ArrayList<String[]> carDetails=new ArrayList<>();
+
     @FXML
     void btnRentAddToCart(ActionEvent event) {
         String[] details=new String[3];
@@ -69,6 +78,11 @@ public class RentFormController {
         }
         double total = Double.parseDouble(txtRentTotal.getText())+Double.parseDouble(txtRentAmount.getText());
         txtRentTotal.setText(String.valueOf(total));
+
+    }
+
+    @FXML
+    void dpEndingDayOnAction(ActionEvent event) {
 
     }
 
@@ -92,8 +106,12 @@ public class RentFormController {
 
         rentDto.setCustId(txtRentCustId.getText());
         rentDto.setStartingDate(txtRentStartingDay.getText());
-        rentDto.setEndingDate(txtRentEndingDay.getText());
-        rentDto.setTotalAmount(Double.parseDouble(txtRentTotal.getText()));
+        rentDto.setEndingDate(String.valueOf(dpEndingDate.getValue()));
+
+        if (txtRentTotal.getText() != null && !txtRentTotal.getText().isEmpty()) {
+            System.out.println("Null");
+        }
+        rentDto.setTotalAmount(Double.parseDouble(txtRentAmount.getText()));
 
         rentDto.setCardetails(carDetails);
 
@@ -115,4 +133,17 @@ public class RentFormController {
 
     }
 
+    public void setDataInComboBox() throws SQLException {
+        ArrayList<String> customerIds = rentModel.getAllCustomerId();
+        cmbCustomerId.getItems().addAll(customerIds);
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        try {
+            setDataInComboBox();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }
