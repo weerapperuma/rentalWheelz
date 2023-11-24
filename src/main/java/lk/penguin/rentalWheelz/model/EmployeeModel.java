@@ -1,5 +1,7 @@
 package lk.penguin.rentalWheelz.model;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import lk.penguin.rentalWheelz.db.DbConnection;
 import lk.penguin.rentalWheelz.dto.CustomerDto;
 import lk.penguin.rentalWheelz.dto.EmployeeDto;
@@ -101,4 +103,18 @@ public class EmployeeModel {
         return dto;
     }
 
+    public ObservableList<String> LoadId() throws SQLException {
+        Connection connection = DbConnection.getInstance().getConnection();
+
+        String sql = "SELECT sup_id FROM supplier";
+        PreparedStatement pstm = connection.prepareStatement(sql);
+        ResultSet resultSet = pstm.executeQuery();
+        ObservableList<String> Ids = FXCollections.observableArrayList();
+
+        while (resultSet.next()){
+            String x = resultSet.getString(1);
+            Ids.add(x);
+        }
+        return Ids;
+    }
 }

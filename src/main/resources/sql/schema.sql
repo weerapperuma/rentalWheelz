@@ -98,3 +98,5 @@ INSERT INTO car VALUES ('V001','luxury','available');
 INSERT INTO customer VALUES ('C001','LOKITHA','walgama','711018201','U001');
 insert into employee values ('E002','babara','babara@gotham.com','dealer','new york','846767');
 INSERT INTO user VALUES ('U002','babara','345','E002');
+INSERT INTO sup_order VALUES('O001','2023-10-10');
+INSERT INTO supplier VALUES('S001','chandana','benz','O001');

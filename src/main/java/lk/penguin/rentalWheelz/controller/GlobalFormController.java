@@ -79,5 +79,9 @@ public class GlobalFormController implements Initializable {
             throw new RuntimeException(e);
         }
     }
+    @FXML
+    void btnOrderOnAction(ActionEvent event) throws IOException {
+        Navigation.switchPaging(pagingPane,"OrderForm.fxml");
+    }
 
 }
