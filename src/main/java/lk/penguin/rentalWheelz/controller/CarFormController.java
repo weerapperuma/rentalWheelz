@@ -133,7 +133,7 @@ public class CarFormController {
     private void updateCar() throws SQLException {
         String id = txtCarId.getText();
         String name = txtCarName.getText();
-        String status="Available";
+        String status="available";
 
         var dto = new CarDto(id, name, status);
 

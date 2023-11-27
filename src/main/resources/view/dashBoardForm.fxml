@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="760.0" prefWidth="1055.0" style="-fx-background-radius: 20; -fx-background-color: black;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.penguin.rentalWheelz.controller.DashBoardFormController" />
+<AnchorPane prefHeight="673.0" prefWidth="1068.0" style="-fx-background-radius: 20; -fx-background-color: black;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.penguin.rentalWheelz.controller.DashBoardFormController">
+   <children>
+      <Label fx:id="lblDateShow" alignment="CENTER" layoutX="774.0" layoutY="569.0" prefHeight="66.0" prefWidth="226.0" text="Label" textFill="#cc00ff">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font></Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.Scene?>
+
+<StackPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.penguin.rentalWheelz.controller.AttendanceFormController">
+    <children>
+        <ScrollPane fx:id="scrollPane" fitToWidth="true">
+            <content>
+                <VBox fx:id="checkBoxContainer"/>
+            </content>
+        </ScrollPane>
+    </children>
+</StackPane>

@@ -9,11 +9,15 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 import lk.penguin.rentalWheelz.db.DbConnection;
 import lk.penguin.rentalWheelz.dto.EmployeeDto;
 import lk.penguin.rentalWheelz.dto.tm.EmployeeTM;
 import lk.penguin.rentalWheelz.model.EmployeeModel;
 import lk.penguin.rentalWheelz.util.Navigation;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import net.sf.jasperreports.engine.*;
 import net.sf.jasperreports.engine.design.JasperDesign;
 import net.sf.jasperreports.engine.xml.JRXmlLoader;
@@ -25,7 +29,9 @@ import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.regex.Pattern;
-
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
 public class EmployeeFormController {
 
     @FXML
@@ -53,8 +59,8 @@ public class EmployeeFormController {
     private TextField txtEmpID;
 
     @FXML
-    void btnEmpAttendance(ActionEvent event) {
-
+    void btnEmpAttendance(ActionEvent event) throws IOException {
+        Navigation.switchPaging2(GlobalFormController.getInstance().pagingPane, "attendanceForm.fxml");
     }
 
 
@@ -145,23 +151,23 @@ public class EmployeeFormController {
 
     private void loadAllEmployees() {
         EmployeeModel model=new EmployeeModel();
-    try {
-      ObservableList<EmployeeTM> oblist = FXCollections.observableArrayList();
-      List<EmployeeDto> list = model.getAllEmployees();
-        for (EmployeeDto dto : list) {
-            EmployeeTM employeeTM = new EmployeeTM(dto.getEmpId(),
+        try {
+            ObservableList<EmployeeTM> oblist = FXCollections.observableArrayList();
+            List<EmployeeDto> list = model.getAllEmployees();
+            for (EmployeeDto dto : list) {
+                EmployeeTM employeeTM = new EmployeeTM(dto.getEmpId(),
                     dto.getEmpName(),
                     dto.getEmail(),
                     dto.getPosition(),
                     dto.getAddress(),
                     dto.getContact()
-            );
-            oblist.add(employeeTM);
+                );
+                oblist.add(employeeTM);
+            }
+            tblEmployee.setItems(oblist);
+        }catch (Exception e){
+            System.out.println(e.getMessage());
         }
-        tblEmployee.setItems(oblist);
-    }catch (Exception e){
-    System.out.println(e.getMessage());
-    }
     }
 
     private void setCellValueFactory() {

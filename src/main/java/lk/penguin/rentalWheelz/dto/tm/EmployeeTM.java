@@ -10,9 +10,9 @@ import lombok.NoArgsConstructor;
 public class EmployeeTM {
     private String empId;
     private String empName;
-    private String empAddress;
-    private String empContact;
     private String empEmail;
     private String empPosition;
+    private String empAddress;
+    private String empContact;
 
 }

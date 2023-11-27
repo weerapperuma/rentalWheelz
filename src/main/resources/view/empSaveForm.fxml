@@ -3,42 +3,48 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="430.0" prefWidth="689.0" style="-fx-background-radius: 40; -fx-background-color: #4F7471;" stylesheets="@../button.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.penguin.rentalWheelz.controller.EmpSaveFormController">
+<AnchorPane prefHeight="430.0" prefWidth="689.0" style="-fx-border-radius: 20; -fx-background-color: black;" stylesheets="@../button.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.penguin.rentalWheelz.controller.EmpSaveFormController">
    <children>
-      <TextField fx:id="txtEmpName" layoutX="404.0" layoutY="106.0" prefHeight="40.0" prefWidth="218.0" promptText="riddler" style="-fx-background-color: white; -fx-background-radius: 20;" />
-      <TextField fx:id="txtEmpEmail" layoutX="74.0" layoutY="188.0" prefHeight="40.0" prefWidth="218.0" promptText="riddler@gmail.com" style="-fx-background-color: white; -fx-background-radius: 20;" />
-      <TextField fx:id="txtEmpPosition" layoutX="403.0" layoutY="188.0" prefHeight="40.0" prefWidth="217.0" promptText="investigator" style="-fx-background-color: white; -fx-background-radius: 20;" />
-      <TextField fx:id="txtEmpAddress" layoutX="75.0" layoutY="271.0" prefHeight="40.0" prefWidth="219.0" promptText="Gotham" style="-fx-background-color: white; -fx-background-radius: 20;" />
-      <TextField fx:id="txtEmpContact" layoutX="406.0" layoutY="269.0" prefHeight="40.0" prefWidth="211.0" promptText="Contact" style="-fx-background-color: white; -fx-background-radius: 20;" />
-      <TextField fx:id="txtEmpID" layoutX="72.0" layoutY="108.0" prefHeight="40.0" prefWidth="218.0" promptText="E001" style="-fx-background-color: white; -fx-background-radius: 20;" />
-      <JFXButton layoutX="264.0" layoutY="348.0" onAction="#btnEmpSaveSaveOnAction" prefHeight="54.0" prefWidth="128.0" styleClass="btn" text="Save">
+      <TextField fx:id="txtEmpName" layoutX="404.0" layoutY="94.0" prefHeight="30.0" prefWidth="218.0" promptText="riddler" style="-fx-background-color: white; -fx-background-radius: 20;" />
+      <TextField fx:id="txtEmpEmail" layoutX="403.0" layoutY="205.0" prefHeight="30.0" prefWidth="218.0" promptText="riddler@gmail.com" style="-fx-background-color: white; -fx-background-radius: 20;" />
+      <TextField fx:id="txtEmpPosition" layoutX="403.0" layoutY="149.0" prefHeight="30.0" prefWidth="218.0" promptText="investigator" style="-fx-background-color: white; -fx-background-radius: 20;" />
+      <TextField fx:id="txtEmpAddress" layoutX="402.0" layoutY="316.0" prefHeight="30.0" prefWidth="219.0" promptText="Gotham" style="-fx-background-color: white; -fx-background-radius: 20;" />
+      <TextField fx:id="txtEmpContact" layoutX="405.0" layoutY="261.0" prefHeight="30.0" prefWidth="211.0" promptText="Contact" style="-fx-background-color: white; -fx-background-radius: 20;" />
+      <TextField fx:id="txtEmpID" layoutX="52.0" layoutY="249.0" prefHeight="30.0" prefWidth="218.0" promptText="E001" style="-fx-background-color: white; -fx-background-radius: 20;" />
+      <JFXButton layoutX="67.0" layoutY="338.0" onAction="#btnEmpSaveSaveOnAction" prefHeight="54.0" prefWidth="128.0" styleClass="btn" text="Save">
          <font>
-            <Font name="System Bold" size="20.0" />
+            <Font name="System Bold Italic" size="18.0" />
          </font></JFXButton>
-      <JFXButton layoutX="140.0" layoutY="372.0" onAction="#btnEmpSaveBack" text="Back" />
-      <Label fx:id="txtEmpIdShow" layoutX="527.0" layoutY="21.0" prefHeight="42.0" prefWidth="81.0" text="Label">
+      <Label fx:id="txtEmpIdShow" layoutX="527.0" layoutY="21.0" prefHeight="42.0" prefWidth="81.0" text="Label" textFill="BLUE">
          <font>
             <Font name="System Bold" size="20.0" />
          </font></Label>
-      <Label layoutX="234.0" layoutY="13.0" prefHeight="53.0" prefWidth="182.0" text="Employee Save">
+      <Label layoutX="234.0" layoutY="13.0" prefHeight="53.0" prefWidth="182.0" text="Employee Save" textFill="#2600ff">
          <font>
-            <Font name="System Bold" size="20.0" />
+            <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <JFXButton layoutX="537.0" layoutY="369.0" onAction="#btnEmpSaveClear" prefHeight="32.0" prefWidth="62.0" text="Clear">
+      <JFXButton layoutX="484.0" layoutY="361.0" minWidth="45.0" onAction="#btnEmpSaveClear" prefHeight="30.0" prefWidth="45.0" style="-fx-background-color: BLUE; -fx-background-radius: 30;" text="Clear">
          <font>
-            <Font name="System Bold" size="20.0" />
+            <Font name="System Italic" size="12.0" />
          </font>
       </JFXButton>
-      <Text layoutX="87.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Input valid ID" wrappingWidth="143.3164005279541" />
-      <Text layoutX="90.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Input valid Email" wrappingWidth="143.3164005279541" />
-      <Text layoutX="88.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Input valid Email" wrappingWidth="143.3164005279541" />
-      <Text layoutX="420.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Input valid Name" wrappingWidth="143.3164005279541" />
-      <Text layoutX="418.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Input valid Position" wrappingWidth="143.3164005279541" />
-      <Text layoutX="420.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact Details" wrappingWidth="143.3164005279541" />
+      <Text fill="WHITE" layoutX="66.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee ID" wrappingWidth="143.3164005279541" />
+      <Text fill="WHITE" layoutX="418.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" wrappingWidth="143.3164005279541" />
+      <Text fill="WHITE" layoutX="416.0" layoutY="311.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address" wrappingWidth="143.3164005279541" />
+      <Text fill="WHITE" layoutX="420.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" wrappingWidth="143.3164005279541" />
+      <Text fill="WHITE" layoutX="418.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Position" wrappingWidth="143.3164005279541" />
+      <Text fill="WHITE" layoutX="419.0" layoutY="258.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact" wrappingWidth="143.3164005279541" />
+      <ImageView fitHeight="120.0" fitWidth="143.0" layoutX="90.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/icon/teamwork.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

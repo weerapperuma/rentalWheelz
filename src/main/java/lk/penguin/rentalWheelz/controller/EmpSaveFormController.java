@@ -1,10 +1,12 @@
 package lk.penguin.rentalWheelz.controller;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 import lk.penguin.rentalWheelz.dto.EmployeeDto;
 import lk.penguin.rentalWheelz.model.EmployeeModel;
 import lk.penguin.rentalWheelz.util.Navigation;
@@ -37,7 +39,9 @@ public class EmpSaveFormController {
 
     @FXML
     void btnEmpSaveBack(ActionEvent event) throws IOException {
-        Navigation.switchPaging(GlobalFormController.getInstance().pagingPane, "employeeForm.fxml");
+
+        //Platform.exit();
+        //Navigation.switchPaging(GlobalFormController.getInstance().pagingPane, "employeeForm.fxml");
     }
 
     @FXML
@@ -64,11 +68,14 @@ public class EmpSaveFormController {
             boolean isSaved = model.savedEmployee(dto);
 
             if(isSaved){
+                Navigation.switchPaging(GlobalFormController.getInstance().pagingPane,"employeeForm.fxml");
                 new Alert(Alert.AlertType.CONFIRMATION,"Employee Saved Successfully").show();
-                //EmployeeFormController.loadAllEmployees();
+
             }
         } catch (SQLException e) {
             new Alert(Alert.AlertType.ERROR,e.getMessage()).show();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 
@@ -77,16 +84,17 @@ public class EmpSaveFormController {
         boolean isEmpIDValidated= Pattern.compile("^(E)[0-9]{1,3}$").matcher(txtEmpID.getText()).matches();
         if(!isEmpIDValidated){
             new Alert(Alert.AlertType.ERROR,"Invalid Employee ID").show();
+
             return false;
         }
 
-        boolean isEmpNameValidated=Pattern.compile("^[A-z]{1,}$").matcher(txtEmpName.getText()).matches();
-        if(!isEmpNameValidated){
-            new Alert(Alert.AlertType.ERROR,"Invalid Employee Name").show();
+        boolean isEmpNameValidated = Pattern.compile("^[a-zA-Z]+( [a-zA-Z]+)?$").matcher(txtEmpName.getText()).matches();
+        if (!isEmpNameValidated) {
+            new Alert(Alert.AlertType.ERROR, "Invalid Employee Name").show();
             return false;
         }
 
-        boolean isEmpAddressValidated=Pattern.compile("^[A-z]{1,}$").matcher(txtEmpAddress.getText()).matches();
+        boolean isEmpAddressValidated=Pattern.compile("^[a-zA-Z, ]{1,100}$").matcher(txtEmpAddress.getText()).matches();
         if(!isEmpAddressValidated){
             new Alert(Alert.AlertType.ERROR,"Invalid Employee Address").show();
             return false;

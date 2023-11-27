@@ -10,15 +10,15 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="760.0" prefWidth="1055.0" style="-fx-background-radius: 20; -fx-background-color: white;" stylesheets="@../button.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.penguin.rentalWheelz.controller.RentFormController">
+<AnchorPane prefHeight="673.0" prefWidth="1068.0" style="-fx-background-radius: 20; -fx-background-color: white;" stylesheets="@../button.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.penguin.rentalWheelz.controller.RentFormController">
     <children>
-        <TableView fx:id="tblEmployee" layoutX="5.0" layoutY="390.0" prefHeight="365.0" prefWidth="1046.0">
+        <TableView fx:id="tblEmployee" layoutX="84.0" layoutY="372.0" prefHeight="258.0" prefWidth="926.0">
             <columns>
                 <TableColumn fx:id="colEmpID" prefWidth="75.0" text="ID" />
                 <TableColumn fx:id="colEmpName" prefWidth="174.39995574951172" text="Customer ID" />
                 <TableColumn fx:id="colEmpEmail" prefWidth="203.46665954589844" text="Amount" />
-                <TableColumn fx:id="colEmpPosition" prefWidth="362.13323974609375" text="Starting Day" />
-                <TableColumn fx:id="colEmpAddress" prefWidth="229.5999755859375" text="Ending Day" />
+                <TableColumn fx:id="colEmpPosition" prefWidth="213.60003662109375" text="Starting Day" />
+                <TableColumn fx:id="colEmpAddress" prefWidth="259.199951171875" text="Ending Day" />
             </columns>
         </TableView>
         <TextField fx:id="txtRentAmount" layoutX="78.0" layoutY="280.0" promptText="Rent fee" style="-fx-background-radius: 5;" />

@@ -3,11 +3,16 @@ package lk.penguin.rentalWheelz.util;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.Region;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
+import lk.penguin.rentalWheelz.controller.EmpSaveFormController;
+import lk.penguin.rentalWheelz.controller.EmployeeFormController;
 import lk.penguin.rentalWheelz.controller.GlobalFormController;
 
 import java.io.IOException;
@@ -39,12 +44,35 @@ public class Navigation {
         GlobalFormController.getInstance().pagingPane.getChildren().clear();
         GlobalFormController.getInstance().pagingPane.setVisible(false);
     }
+    public static void closePane2(){
+
+    }
     public static void switchPaging2(Pane pane, String path) throws IOException {
         //pane.getChildren().clear();
         FXMLLoader loader = new FXMLLoader(Navigation.class.getResource("/view/" + path));
 
         Parent root=loader.load();
-        pane.getChildren().add(root);
+        //pane.getChildren().add(root);
 
+        Stage popupStage = new Stage();
+        popupStage.initModality(Modality.APPLICATION_MODAL);
+        popupStage.initOwner(pane.getScene().getWindow());
+
+        // Set the title if needed
+        popupStage.setTitle("Popup Title");
+
+        // Create a new scene with the loaded root and set it to the stage
+        Scene scene = new Scene(root);
+        popupStage.setScene(scene);
+
+        // Center the stage on the screen
+        popupStage.centerOnScreen();
+
+        // Show the stage
+        popupStage.showAndWait();
+
+    }
+    public static void closePopUpStage(Stage stage) {
+        stage.close();
     }
 }

@@ -33,6 +33,21 @@
     -fx-alignment: center;
 }
 
+.btn2 {
+    -fx-background-color: rgba(0, 0, 0, 0);
+    -fx-border-color: #760083;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-font-size: 24;
+    -fx-pref-width: 150;
+    -fx-pref-height: 20;
+    -fx-alignment: center;
+}
+.btn2:hover {
+    -fx-background-color: #760083; /* Change the color to your desired hover color */
+    -fx-text-fill: white; /* Change the text color on hover if needed */
+}
+
 .btn:hover {
     -fx-background-color: #09d2f5;
     -fx-border-color: transparent;

@@ -4,17 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c177ce81-1648-4efd-a82d-1758e05564ce" name="Changes" comment="git add Transaction-1">
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/penguin/rentalWheelz/controller/OrderFormController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/penguin/rentalWheelz/dto/OrderDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/penguin/rentalWheelz/model/OrderModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assests/img/Frame 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/view/OrderForm.fxml" afterDir="false" />
+    <list default="true" id="c177ce81-1648-4efd-a82d-1758e05564ce" name="Changes" comment="git add Transaction-2">
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/penguin/rentalWheelz/controller/AttendanceFormController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assests/icon/teamwork.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/tableStyle.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/attendanceForm.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/penguin/rentalWheelz/controller/GlobalFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/penguin/rentalWheelz/controller/GlobalFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/penguin/rentalWheelz/model/EmployeeModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/penguin/rentalWheelz/model/EmployeeModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/penguin/rentalWheelz/controller/CarFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/penguin/rentalWheelz/controller/CarFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/penguin/rentalWheelz/controller/DashBoardFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/penguin/rentalWheelz/controller/DashBoardFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/penguin/rentalWheelz/controller/EmpSaveFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/penguin/rentalWheelz/controller/EmpSaveFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/penguin/rentalWheelz/controller/EmployeeFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/penguin/rentalWheelz/controller/EmployeeFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/penguin/rentalWheelz/dto/tm/EmployeeTM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/penguin/rentalWheelz/dto/tm/EmployeeTM.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/penguin/rentalWheelz/util/Navigation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/penguin/rentalWheelz/util/Navigation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/button.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/button.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/sql/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql/schema.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/OrderForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/OrderForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/carForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/carForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/customerForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/customerForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/dashBoardForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/dashBoardForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/empSaveForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/empSaveForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/employeeForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/employeeForm.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/view/globalForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/globalForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/rentForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/rentForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/supplierForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/supplierForm.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,9 +36,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="FxmlFile" />
         <option value="Class" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -47,6 +59,9 @@
       </UrlAndAccount>
     </option>
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-fxml/19.0.2.1/javafx-fxml-19.0.2.1-sources.jar!/com/sun/javafx/fxml/MethodHelper.java" root0="SKIP_INSPECTION" />
+  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -62,40 +77,41 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "full.screen.before.presentation.mode": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/sdwee/OneDrive/Documents/GDSE/testingRentalWheelz",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;full.screen.before.presentation.mode&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/sdwee/OneDrive/Documents/GDSE/rentalWheelz/src/main/resources/assests/icon&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="lk.penguin.rentalWheelz.controller" />
       <recent name="lk.penguin.rentalWheelz.model" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\sdwee\OneDrive\Documents\GDSE\rentalWheelz\src\main\resources\assests\icon" />
       <recent name="C:\Users\sdwee\OneDrive\Documents\GDSE\rentalWheelz\src\main\resources\reports" />
       <recent name="C:\Users\sdwee\OneDrive\Documents\GDSE\rentalWheelz\src\main\resources\view" />
       <recent name="C:\Users\sdwee\OneDrive\Documents\GDSE\rentalWheelz\src\main\resources\assests" />
@@ -162,7 +178,10 @@
       <workItem from="1700719646439" duration="3778000" />
       <workItem from="1700732683128" duration="2713000" />
       <workItem from="1700763764889" duration="1543000" />
-      <workItem from="1700794879753" duration="9727000" />
+      <workItem from="1700794879753" duration="11349000" />
+      <workItem from="1700891615033" duration="27014000" />
+      <workItem from="1700998278359" duration="5780000" />
+      <workItem from="1701075254252" duration="6029000" />
     </task>
     <task id="LOCAL-00001" summary="git comit 1">
       <option name="closed" value="true" />
@@ -252,7 +271,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700673324673</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="git add Transaction-2">
+      <option name="closed" value="true" />
+      <created>1700812995387</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1700812995387</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -279,7 +306,8 @@
     <MESSAGE value="git add jasper reports" />
     <MESSAGE value="git add car crud" />
     <MESSAGE value="git add Transaction-1" />
-    <option name="LAST_COMMIT_MESSAGE" value="git add Transaction-1" />
+    <MESSAGE value="git add Transaction-2" />
+    <option name="LAST_COMMIT_MESSAGE" value="git add Transaction-2" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

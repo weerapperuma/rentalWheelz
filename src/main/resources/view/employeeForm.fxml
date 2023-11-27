@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
 <?import java.net.URL?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
@@ -9,9 +10,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="760.0" prefWidth="1055.0" style="-fx-background-radius: 20; -fx-background-color: #16558F;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.penguin.rentalWheelz.controller.EmployeeFormController">
+<AnchorPane prefHeight="673.0" prefWidth="1068.0" style="-fx-background-radius: 20; -fx-background-color: #16558F;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.penguin.rentalWheelz.controller.EmployeeFormController">
     <children>
-        <TableView fx:id="tblEmployee" layoutX="4.0" layoutY="55.0" prefHeight="357.0" prefWidth="1047.0" style="-fx-background-color: #B8E3FF; -fx-border-color: black;">
+        <TableView fx:id="tblEmployee" layoutX="20.0" layoutY="55.0" prefHeight="359.0" prefWidth="1023.0" style="-fx-background-color: #B8E3FF; -fx-border-color: black;">
             <columns>
                 <TableColumn fx:id="colEmpID" prefWidth="75.0" text="ID" />
                 <TableColumn fx:id="colEmpName" prefWidth="174.39995574951172" text="Name" />
@@ -20,15 +21,19 @@
                 <TableColumn fx:id="colEmpAddress" prefWidth="298.666748046875" text="Address" />
                 <TableColumn fx:id="colEmpContact" prefWidth="166.1331787109375" text="Contact" />
             </columns>
+         <styleClass>
+            <String fx:value="table-view" />
+            <String fx:value="column-header-background" />
+         </styleClass>
         </TableView>
-        <TextField fx:id="txtEmpID" alignment="CENTER" layoutX="396.0" layoutY="579.0" prefHeight="44.0" prefWidth="220.0" promptText="Employee ID" style="-fx-background-radius: 30; -fx-background-color: B8E3FF;" />
-        <JFXButton layoutX="642.0" layoutY="575.0" onAction="#btnEmpSave" prefHeight="26.0" prefWidth="79.0" styleClass="btn" text="Save" />
-        <JFXButton layoutX="417.0" layoutY="657.0" onAction="#btnEmpUpdate" prefHeight="26.0" prefWidth="79.0" styleClass="btn" text="Update" />
-        <JFXButton layoutX="191.0" layoutY="575.0" onAction="#btnEmpDelete" prefHeight="26.0" prefWidth="79.0" styleClass="btn" text="Delete" />
-        <JFXButton layoutX="864.0" layoutY="683.0" onAction="#btnEmpClear" prefHeight="28.0" prefWidth="47.0" style="-fx-background-radius: 0; -fx-background-color: green;" text="Clear" />
-        <JFXButton layoutX="28.0" layoutY="469.0" onAction="#btnEmpAttendance" prefHeight="58.0" prefWidth="220.0" styleClass="bigButton" text="Attendance" />
-        <JFXButton layoutX="28.0" layoutY="667.0" onAction="#btnEmpSalary" prefHeight="58.0" prefWidth="220.0" styleClass="bigButton" text="Salary" />
-      <JFXButton layoutX="417.0" layoutY="472.0" onAction="#btnEmpSearch" prefHeight="26.0" prefWidth="79.0" styleClass="btn" text="Search" />
+        <TextField fx:id="txtEmpID" alignment="CENTER" layoutX="441.0" layoutY="507.0" prefHeight="44.0" prefWidth="220.0" promptText="Employee ID" style="-fx-background-radius: 30; -fx-background-color: B8E3FF;" />
+        <JFXButton layoutX="673.0" layoutY="505.0" onAction="#btnEmpSave" prefHeight="26.0" prefWidth="79.0" styleClass="btn" text="Save" />
+        <JFXButton layoutX="455.0" layoutY="568.0" onAction="#btnEmpUpdate" prefHeight="26.0" prefWidth="79.0" styleClass="btn" text="Update" />
+        <JFXButton layoutX="254.0" layoutY="504.0" onAction="#btnEmpDelete" prefHeight="26.0" prefWidth="79.0" styleClass="btn" text="Delete" />
+        <JFXButton layoutX="874.0" layoutY="553.0" onAction="#btnEmpClear" prefHeight="28.0" prefWidth="47.0" style="-fx-background-radius: 0; -fx-background-color: green;" text="Clear" />
+        <JFXButton layoutX="75.0" layoutY="439.0" onAction="#btnEmpAttendance" prefHeight="58.0" prefWidth="220.0" styleClass="bigButton" text="Attendance" />
+        <JFXButton layoutX="73.0" layoutY="566.0" onAction="#btnEmpSalary" prefHeight="58.0" prefWidth="220.0" styleClass="bigButton" text="Salary" />
+      <JFXButton layoutX="456.0" layoutY="439.0" onAction="#btnEmpSearch" prefHeight="26.0" prefWidth="79.0" styleClass="btn" text="Search" />
       <Label layoutX="414.0" layoutY="19.0" prefHeight="44.0" prefWidth="245.0" text="Employee Management">
          <font>
             <Font name="System Bold" size="20.0" />
@@ -39,5 +44,6 @@
    <stylesheets>
       <URL value="@../bigButton.css" />
       <URL value="@../button.css" />
+      <URL value="@../tableStyle.css" />
    </stylesheets>
 </AnchorPane>
