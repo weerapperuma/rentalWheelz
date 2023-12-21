@@ -1,14 +1,20 @@
 package lk.penguin.rentalWheelz.controller;
 
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.util.Duration;
 import lk.penguin.rentalWheelz.util.Navigation;
 
 import java.io.IOException;
 import java.net.URL;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.ResourceBundle;
 
 public class GlobalFormController implements Initializable {
@@ -18,6 +24,8 @@ public class GlobalFormController implements Initializable {
     public AnchorPane pagingPane;
 
     private static GlobalFormController controller;
+    @FXML
+    private Label lblDateandTime;
 
     public GlobalFormController() {
         controller = this;
@@ -51,6 +59,10 @@ public class GlobalFormController implements Initializable {
     void btnHomeOnMouseEntered(MouseEvent event) {
 
     }
+    @FXML
+    void btnEmpAttendance(ActionEvent event) throws IOException {
+        Navigation.switchPaging2(GlobalFormController.getInstance().pagingPane, "attendanceForm.fxml");
+    }
 
     @FXML
     void btnLogOutOnAction(ActionEvent event) throws IOException {
@@ -59,7 +71,7 @@ public class GlobalFormController implements Initializable {
 
     @FXML
     void btnRentOnAction(ActionEvent event) throws IOException {
-        Navigation.switchPaging(pagingPane,"rentForm.fxml");
+        Navigation.switchPaging(pagingPane,"rentalForm.fxml");
     }
 
     @FXML
@@ -78,10 +90,32 @@ public class GlobalFormController implements Initializable {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+        startClock();
+    }
+    public void startClock() {
+        Timeline clockTimeline = new Timeline(new KeyFrame(Duration.seconds(1), event -> {
+            // Update time label
+            //SimpleDateFormat timeFormat = new SimpleDateFormat("hh:mm a");
+            //String currentTime = timeFormat.format(new Date());
+            //lblDateShow.setText(currentTime);
+
+            // Update date-time label
+            SimpleDateFormat dateTimeFormat = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+            String currentDateTime = dateTimeFormat.format(new Date());
+            lblDateandTime.setText(currentDateTime);
+        }));
+
+        // Set the timeline to repeat indefinitely
+        clockTimeline.setCycleCount(Timeline.INDEFINITE);
+
+        // Start the timeline
+        clockTimeline.play();
     }
     @FXML
     void btnOrderOnAction(ActionEvent event) throws IOException {
         Navigation.switchPaging(pagingPane,"OrderForm.fxml");
     }
+
+
 
 }

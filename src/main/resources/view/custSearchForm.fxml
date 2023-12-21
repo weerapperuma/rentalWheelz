@@ -3,40 +3,42 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="430.0" prefWidth="689.0" style="-fx-background-radius: 40; -fx-background-color: #4F7471;" stylesheets="@../button.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.penguin.rentalWheelz.controller.CustSearchFormController">
+<AnchorPane prefHeight="430.0" prefWidth="689.0" style="-fx-background-radius: 20; -fx-background-color: black;" stylesheets="@../button.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.penguin.rentalWheelz.controller.CustSearchFormController">
     <children>
-        <TextField fx:id="txtCustName" layoutX="404.0" layoutY="106.0" prefHeight="40.0" prefWidth="218.0" promptText="riddler" style="-fx-background-color: white; -fx-background-radius: 20;" />
-        <TextField fx:id="txtCustAddress" layoutX="74.0" layoutY="188.0" prefHeight="40.0" prefWidth="218.0" promptText="gotham" style="-fx-background-color: white; -fx-background-radius: 20;" />
-        <TextField fx:id="txtCustContact" layoutX="403.0" layoutY="188.0" prefHeight="40.0" prefWidth="217.0" promptText="10digit number" style="-fx-background-color: white; -fx-background-radius: 20;" />
-        <TextField fx:id="txtCustUserId" layoutX="75.0" layoutY="271.0" prefHeight="40.0" prefWidth="219.0" promptText="Input user id" style="-fx-background-color: white; -fx-background-radius: 20;" />
-        <TextField fx:id="txtCustID" layoutX="72.0" layoutY="108.0" prefHeight="40.0" prefWidth="218.0" promptText="C001" style="-fx-background-color: white; -fx-background-radius: 20;" />
+        <TextField fx:id="txtCustName" layoutX="402.0" layoutY="90.0" prefHeight="37.0" prefWidth="218.0" promptText="riddler" style="-fx-background-color: white; -fx-background-radius: 20;" />
+        <TextField fx:id="txtCustAddress" layoutX="402.0" layoutY="217.0" prefHeight="37.0" prefWidth="218.0" promptText="gotham" style="-fx-background-color: white; -fx-background-radius: 20;" />
+        <TextField fx:id="txtCustContact" layoutX="402.0" layoutY="155.0" prefHeight="37.0" prefWidth="218.0" promptText="10digit number" style="-fx-background-color: white; -fx-background-radius: 20;" />
+        <TextField fx:id="txtCustUserId" layoutX="401.0" layoutY="279.0" prefHeight="38.0" prefWidth="219.0" promptText="Input user id" style="-fx-background-color: white; -fx-background-radius: 20;" />
+        <TextField fx:id="txtCustID" layoutX="87.0" layoutY="284.0" prefHeight="37.0" prefWidth="218.0" promptText="C001" style="-fx-background-color: white; -fx-background-radius: 20;" />
         <JFXButton layoutX="264.0" layoutY="348.0" onAction="#btnCustUpdateOnAction" prefHeight="54.0" prefWidth="128.0" styleClass="btn" text="Update">
             <font>
                 <Font name="System Bold" size="20.0" />
             </font></JFXButton>
-        <JFXButton layoutX="140.0" layoutY="372.0" onAction="#btnCustSearchBack" text="Back" />
-        <Label fx:id="txtCustIdShow" layoutX="527.0" layoutY="21.0" prefHeight="42.0" prefWidth="81.0" text="Label">
+        <Label fx:id="txtCustIdShow" layoutX="527.0" layoutY="21.0" prefHeight="42.0" prefWidth="81.0" text="Label" textFill="#c508ee">
             <font>
                 <Font name="System Bold" size="20.0" />
             </font></Label>
-        <Label layoutX="234.0" layoutY="13.0" prefHeight="53.0" prefWidth="182.0" text="Cust Search">
+        <Label layoutX="276.0" layoutY="13.0" prefHeight="53.0" prefWidth="182.0" text="Cust Search" textFill="#c508ee">
             <font>
-                <Font name="System Bold" size="20.0" />
+                <Font name="System Bold" size="24.0" />
             </font>
         </Label>
-        <JFXButton layoutX="537.0" layoutY="363.0" onAction="#btnCustUpdateClear" prefHeight="32.0" prefWidth="62.0" text="Clear">
-            <font>
-                <Font size="16.0" />
-            </font>
-        </JFXButton>
-        <Text layoutX="87.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Input valid ID" wrappingWidth="143.3164005279541" />
-        <Text layoutX="90.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address" wrappingWidth="143.3164005279541" />
-        <Text layoutX="88.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User ID" wrappingWidth="143.3164005279541" />
-        <Text layoutX="420.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Input valid Name" wrappingWidth="143.3164005279541" />
-        <Text layoutX="418.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact" wrappingWidth="143.3164005279541" />
+        <JFXButton layoutX="537.0" layoutY="363.0" onAction="#btnCustUpdateClear" prefHeight="32.0" prefWidth="62.0" text="Clear" textFill="BLUE" />
+        <Text fill="WHITE" layoutX="104.0" layoutY="282.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Input valid ID" wrappingWidth="143.3164005279541" />
+        <Text fill="WHITE" layoutX="418.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address" wrappingWidth="143.3164005279541" />
+        <Text fill="WHITE" layoutX="418.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User ID" wrappingWidth="143.3164005279541" />
+        <Text fill="WHITE" layoutX="418.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Input valid Name" wrappingWidth="143.3164005279541" />
+        <Text fill="WHITE" layoutX="416.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact" wrappingWidth="143.3164005279541" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="96.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/icon/icons8-search-120.png" />
+         </image>
+      </ImageView>
     </children>
 </AnchorPane>

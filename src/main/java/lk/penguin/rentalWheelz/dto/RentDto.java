@@ -16,4 +16,6 @@ public class RentDto {
     private String startingDate;
     private String endingDate;
     private ArrayList<String []> cardetails;
+
+
 }

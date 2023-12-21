@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.layout.StackPane?>
-<?import javafx.scene.Scene?>
 
-<StackPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.penguin.rentalWheelz.controller.AttendanceFormController">
-    <children>
-        <ScrollPane fx:id="scrollPane" fitToWidth="true">
+<AnchorPane prefHeight="449.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.penguin.rentalWheelz.controller.AttendanceFormController">
+   <children>
+        <ScrollPane fx:id="scrollPane" fitToWidth="true" prefHeight="402.0" prefWidth="598.0">
             <content>
-                <VBox fx:id="checkBoxContainer"/>
+                <VBox fx:id="checkBoxContainer" prefHeight="269.0" prefWidth="449.0" />
             </content>
         </ScrollPane>
-    </children>
-</StackPane>
+      <Button layoutX="471.0" layoutY="410.0" mnemonicParsing="false" onAction="#btnAttendanceEmployee" text="Mark Attendance" />
+   </children>
+</AnchorPane>

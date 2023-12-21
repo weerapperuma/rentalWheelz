@@ -31,5 +31,9 @@ public class LoginPageFormController {
             new Alert(Alert.AlertType.ERROR,"Invalid Credentials").show();
         }
     }
+    @FXML
+    void hyperForgotPasswordOnAction(ActionEvent event) throws IOException {
+        Navigation.switchPaging2(GlobalFormController.getInstance().pagingPane,"fogotPassword_form.fxml");
+    }
 
 }

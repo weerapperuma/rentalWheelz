@@ -28,7 +28,8 @@ public class DbConnection {
         }
         return dbConnection;
     }
-    public Connection getConnection(){
+    public Connection getConnection() throws SQLException {
+        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/rental_wheelz", "penguinDB", "pax_penguina");
         return connection;
     }
 }

@@ -6,9 +6,10 @@
 
 <AnchorPane prefHeight="673.0" prefWidth="1068.0" style="-fx-background-radius: 20; -fx-background-color: black;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.penguin.rentalWheelz.controller.DashBoardFormController">
    <children>
-      <Label fx:id="lblDateShow" alignment="CENTER" layoutX="774.0" layoutY="569.0" prefHeight="66.0" prefWidth="226.0" text="Label" textFill="#cc00ff">
+      <Label fx:id="lblCalenderShow" alignment="CENTER" layoutX="627.0" layoutY="24.0" prefHeight="42.0" prefWidth="411.0" text="Label" textFill="#cc00ff">
          <font>
             <Font name="System Bold" size="24.0" />
-         </font></Label>
+         </font>
+      </Label>
    </children>
 </AnchorPane>

@@ -9,7 +9,7 @@
 .loginbtn{
     -fx-background-radius: 50;
     -fx-border-radius: 50;
-    -fx-background-color: #09d2f5;
+    -fx-background-color: #cc00cd;
     -fx-text-fill: #000000;
 }
 .loginbtn:hover{
@@ -23,7 +23,7 @@
     -fx-font-family: "Lucida Sans Unicode";
 }
 .btn {
-    -fx-background-color: rgba(0, 0, 0, 0);
+    -fx-background-color: #c508ee;
     -fx-border-color: #001c83;
     -fx-border-radius: 30;
     -fx-background-radius: 30;
@@ -44,12 +44,27 @@
     -fx-alignment: center;
 }
 .btn2:hover {
-    -fx-background-color: #760083; /* Change the color to your desired hover color */
+    -fx-background-color: #ca03f6; /* Change the color to your desired hover color */
     -fx-text-fill: white; /* Change the text color on hover if needed */
 }
 
 .btn:hover {
-    -fx-background-color: #09d2f5;
+    -fx-background-color: #0000ff;
     -fx-border-color: transparent;
-    -fx-text-fill: #000000;
+    -fx-text-fill: #ffffff;
+}
+.btnLogin {
+    -fx-background-color: #0000ff;
+    -fx-border-color: transparent;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-font-size: 20;
+    -fx-pref-width: 210;
+    -fx-pref-height: 42;
+    -fx-alignment: center;
+}
+.btnLogin:hover {
+    -fx-background-color: #c508ee;
+    -fx-border-color: transparent;
+    -fx-text-fill: #ffffff;
 }

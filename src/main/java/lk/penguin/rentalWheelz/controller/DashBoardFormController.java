@@ -1,46 +1,40 @@
 package lk.penguin.rentalWheelz.controller;
 
-import javafx.application.Platform;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.util.Duration;
 
-import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
+import java.util.Date;
 
 public class DashBoardFormController {
 
     @FXML
     private Label lblDateShow;
 
-
-    private int minute;
-    private int hour;
-    private int second;
+    @FXML
+    private Label lblCalenderShow;
 
     @FXML
     public void initialize() {
+        Timeline clockTimeline = new Timeline(new KeyFrame(Duration.seconds(1), event -> {
+            // Update time label
+            //SimpleDateFormat timeFormat = new SimpleDateFormat("hh:mm a");
+            //String currentTime = timeFormat.format(new Date());
+            //lblDateShow.setText(currentTime);
 
-        Thread clock = new Thread() {
-            public void run() {
-                for (;;) {
-                    DateFormat dateFormat = new SimpleDateFormat("hh:mm a");
-                    Calendar cal = Calendar.getInstance();
+            // Update date-time label
+            SimpleDateFormat dateTimeFormat = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+            String currentDateTime = dateTimeFormat.format(new Date());
+            lblCalenderShow.setText(currentDateTime);
+        }));
 
-                    second = cal.get(Calendar.SECOND);
-                    minute = cal.get(Calendar.MINUTE);
-                    hour = cal.get(Calendar.HOUR);
-                    //System.out.println(hour + ":" + (minute) + ":" + second);
-                    Platform.runLater(() -> lblDateShow.setText(hour + ":" + (minute) + ":" + second));
+        // Set the timeline to repeat indefinitely
+        clockTimeline.setCycleCount(Timeline.INDEFINITE);
 
-                    try {
-                        sleep(1000);
-                    } catch (InterruptedException ex) {
-                        //...
-                    }
-                }
-            }
-        };
-        clock.start();
+        // Start the timeline
+        clockTimeline.play();
     }
 }

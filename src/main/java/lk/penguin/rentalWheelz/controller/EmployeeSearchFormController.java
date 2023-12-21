@@ -37,11 +37,6 @@ public class EmployeeSearchFormController {
     private TextField txtEmpPosition;
 
     @FXML
-    void btnEmpSearchBack(ActionEvent event) throws IOException {
-        Navigation.switchPaging(GlobalFormController.getInstance().pagingPane, "employeeForm.fxml");
-    }
-
-    @FXML
     void btnEmpUpdateClear(ActionEvent event) {
         //txtEmpID.clear();
         txtEmpName.clear();
@@ -74,29 +69,33 @@ public class EmployeeSearchFormController {
             boolean isUpdated = model.updateEmployee(dto);
 
             if(isUpdated){
+                Navigation.switchPaging(GlobalFormController.getInstance().pagingPane,"employeeForm.fxml");
                 new Alert(Alert.AlertType.CONFIRMATION,"Employee Updated Successfully").show();
-                //EmployeeFormController.loadAllEmployees();
             }
         } catch (SQLException e) {
-            System.out.println("hello");
+            System.out.println("Error Update");
             new Alert(Alert.AlertType.ERROR,e.getMessage()).show();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 
     private boolean validateEmpSave() {
+
         boolean isEmpIDValidated= Pattern.compile("^(E)[0-9]{1,3}$").matcher(txtEmpID.getText()).matches();
         if(!isEmpIDValidated){
             new Alert(Alert.AlertType.ERROR,"Invalid Employee ID").show();
+
             return false;
         }
 
-        boolean isEmpNameValidated=Pattern.compile("^[A-z]{1,}$").matcher(txtEmpName.getText()).matches();
-        if(!isEmpNameValidated){
-            new Alert(Alert.AlertType.ERROR,"Invalid Employee Name").show();
+        boolean isEmpNameValidated = Pattern.compile("^[a-zA-Z]+( [a-zA-Z]+)?$").matcher(txtEmpName.getText()).matches();
+        if (!isEmpNameValidated) {
+            new Alert(Alert.AlertType.ERROR, "Invalid Employee Name").show();
             return false;
         }
 
-        boolean isEmpAddressValidated=Pattern.compile("^[A-z]{1,}$").matcher(txtEmpAddress.getText()).matches();
+        boolean isEmpAddressValidated=Pattern.compile("^[a-zA-Z, ]{1,100}$").matcher(txtEmpAddress.getText()).matches();
         if(!isEmpAddressValidated){
             new Alert(Alert.AlertType.ERROR,"Invalid Employee Address").show();
             return false;

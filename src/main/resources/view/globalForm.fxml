@@ -2,6 +2,7 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import java.net.URL?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -25,37 +26,47 @@
                 <Font name="System Bold" size="18.0" />
             </font>
         </JFXButton>
-        <JFXButton layoutX="49.0" layoutY="342.0" onAction="#btnHomeOnAction" prefHeight="61.0" prefWidth="175.0" styleClass="btn" text="HOME" textFill="WHITE">
+        <JFXButton layoutX="49.0" layoutY="294.0" onAction="#btnHomeOnAction" prefHeight="61.0" prefWidth="175.0" styleClass="btn" text="HOME" textFill="WHITE">
             <font>
                 <Font name="System Bold" size="18.0" />
             </font>
         </JFXButton>
-        <JFXButton layoutX="455.0" layoutY="52.0" onAction="#btnEmployeeOnAction" prefHeight="61.0" prefWidth="175.0" styleClass="btn2" text="Employee" textFill="WHITE">
+        <JFXButton layoutX="346.0" layoutY="52.0" onAction="#btnEmployeeOnAction" prefHeight="61.0" prefWidth="175.0" styleClass="btn2" text="Employee" textFill="WHITE">
             <font>
                 <Font name="System Bold" size="18.0" />
             </font>
         </JFXButton>
-        <JFXButton layoutX="612.0" layoutY="51.0" onAction="#btnVehicleOnAction" prefHeight="61.0" prefWidth="175.0" styleClass="btn2" text="Vehicle" textFill="WHITE">
+        <JFXButton layoutX="504.0" layoutY="52.0" onAction="#btnVehicleOnAction" prefHeight="61.0" prefWidth="175.0" styleClass="btn2" text="Vehicle" textFill="WHITE">
             <font>
                 <Font name="System Bold" size="18.0" />
             </font>
         </JFXButton>
-        <JFXButton layoutX="768.0" layoutY="51.0" onAction="#btnCustomerOnAction" prefHeight="61.0" prefWidth="175.0" styleClass="btn2" text="Customer" textFill="WHITE">
+        <JFXButton layoutX="662.0" layoutY="51.0" onAction="#btnCustomerOnAction" prefHeight="61.0" prefWidth="175.0" styleClass="btn2" text="Customer" textFill="WHITE">
             <font>
                 <Font name="System Bold" size="18.0" />
             </font>
         </JFXButton>
-        <JFXButton layoutX="924.0" layoutY="51.0" onAction="#btnSupplierOnAction" prefHeight="61.0" prefWidth="175.0" styleClass="btn2" text="Supplier" textFill="WHITE">
+        <JFXButton layoutX="820.0" layoutY="51.0" onAction="#btnSupplierOnAction" prefHeight="61.0" prefWidth="175.0" styleClass="btn2" text="Supplier" textFill="WHITE">
             <font>
                 <Font name="System Bold" size="18.0" />
             </font>
         </JFXButton>
-        <JFXButton layoutX="50.0" layoutY="417.0" onAction="#btnRentOnAction" prefHeight="61.0" prefWidth="175.0" styleClass="btn" text="Rent" textFill="WHITE">
+        <JFXButton layoutX="50.0" layoutY="397.0" onAction="#btnRentOnAction" prefHeight="61.0" prefWidth="175.0" styleClass="btn" text="Rent" textFill="WHITE">
             <font>
                 <Font name="System Bold" size="18.0" />
             </font>
         </JFXButton>
       <JFXButton layoutX="50.0" layoutY="492.0" onAction="#btnOrderOnAction" prefHeight="61.0" prefWidth="175.0" styleClass="btn" text="Order" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="lblDateandTime" alignment="TOP_RIGHT" layoutX="983.0" layoutY="18.0" prefHeight="24.0" prefWidth="363.0" text="Label" textFill="#f600ff">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="50.0" layoutY="583.0" onAction="#btnEmpAttendance" prefHeight="61.0" prefWidth="175.0" styleClass="btn" text="Attendance" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
 <?import java.net.URL?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
@@ -9,30 +10,38 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="673.0" prefWidth="1068.0" style="-fx-background-radius: 20; -fx-background-color: #16558F;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.penguin.rentalWheelz.controller.CarFormController">
+<AnchorPane prefHeight="673.0" prefWidth="1068.0" style="-fx-background-radius: 20;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.penguin.rentalWheelz.controller.CarFormController">
    <children>
-      <TableView fx:id="tblSupplier" layoutX="26.0" layoutY="55.0" prefHeight="357.0" prefWidth="1025.0" style="-fx-background-color: #B8E3FF; -fx-border-color: black;">
+      <TableView fx:id="tblSupplier" layoutX="26.0" layoutY="55.0" prefHeight="357.0" prefWidth="1025.0" style="-fx-background-color: #CC00CD; -fx-border-color: black;">
          <columns>
             <TableColumn fx:id="colCarID" prefWidth="280.00005531311035" text="ID" />
             <TableColumn fx:id="colCarName" prefWidth="553.5998916625977" text="Name" />
             <TableColumn fx:id="colCarStatus" prefWidth="210.13351440429688" text="Status" />
          </columns>
+         <styleClass>
+            <String fx:value="column-header" />
+            <String fx:value="column-header-background" />
+            <String fx:value="table-row-cell" />
+            <String fx:value="table-view" />
+            <String fx:value="textBox" />
+         </styleClass>
       </TableView>
-      <TextField fx:id="txtCarId" alignment="CENTER" layoutX="126.0" layoutY="473.0" prefHeight="44.0" prefWidth="220.0" promptText="Car ID" style="-fx-background-radius: 30; -fx-background-color: B8E3FF;" />
-      <JFXButton layoutX="600.0" layoutY="549.0" onAction="#btnCarSave" prefHeight="26.0" prefWidth="79.0" styleClass="btn" text="Save" />
-      <JFXButton layoutX="398.0" layoutY="547.0" onAction="#btnCarUpdate" prefHeight="26.0" prefWidth="79.0" styleClass="btn" text="Update" />
-      <JFXButton layoutX="191.0" layoutY="546.0" onAction="#btnCarDelete" prefHeight="26.0" prefWidth="79.0" styleClass="btn" text="Delete" />
+      <TextField fx:id="txtCarId" alignment="CENTER" layoutX="126.0" layoutY="473.0" prefHeight="34.0" prefWidth="220.0" promptText="Car ID" style="-fx-background-radius: 30; -fx-background-color: B8E3FF;" />
+      <JFXButton layoutX="559.0" layoutY="540.0" onAction="#btnCarSave" prefHeight="26.0" prefWidth="79.0" styleClass="btn" text="Save" />
+      <JFXButton layoutX="367.0" layoutY="540.0" onAction="#btnCarUpdate" prefHeight="26.0" prefWidth="79.0" styleClass="btn" text="Update" />
+      <JFXButton layoutX="559.0" layoutY="464.0" onAction="#btnCarDelete" prefHeight="26.0" prefWidth="79.0" styleClass="btn" text="Delete" />
       <JFXButton layoutX="864.0" layoutY="566.0" onAction="#btnEmpClear" prefHeight="28.0" prefWidth="47.0" style="-fx-background-radius: 0; -fx-background-color: green;" text="Clear" />
-      <JFXButton layoutX="630.0" layoutY="472.0" onAction="#btnCarSearch" prefHeight="26.0" prefWidth="79.0" styleClass="btn" text="Search" />
-      <Label layoutX="414.0" layoutY="19.0" prefHeight="44.0" prefWidth="245.0" text="Car Management">
+      <JFXButton layoutX="360.0" layoutY="464.0" onAction="#btnCarSearch" prefHeight="26.0" prefWidth="79.0" styleClass="btn" text="Search" />
+      <Label layoutX="414.0" layoutY="19.0" prefHeight="44.0" prefWidth="245.0" text="Car Management" textFill="#c508ee">
          <font>
-            <Font name="System Bold" size="20.0" />
+            <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <TextField fx:id="txtCarName" alignment="CENTER" layoutX="370.0" layoutY="474.0" prefHeight="44.0" prefWidth="220.0" promptText="Car Name" style="-fx-background-radius: 30; -fx-background-color: B8E3FF;" />
+      <TextField fx:id="txtCarName" alignment="CENTER" layoutX="126.0" layoutY="558.0" prefHeight="34.0" prefWidth="220.0" promptText="Car Name" style="-fx-background-radius: 30; -fx-background-color: B8E3FF;" />
    </children>
    <stylesheets>
       <URL value="@../bigButton.css" />
       <URL value="@../button.css" />
+      <URL value="@../tableStyle.css" />
    </stylesheets>
 </AnchorPane>

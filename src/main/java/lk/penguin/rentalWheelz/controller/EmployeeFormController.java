@@ -58,10 +58,7 @@ public class EmployeeFormController {
     @FXML
     private TextField txtEmpID;
 
-    @FXML
-    void btnEmpAttendance(ActionEvent event) throws IOException {
-        Navigation.switchPaging2(GlobalFormController.getInstance().pagingPane, "attendanceForm.fxml");
-    }
+
 
 
     public static String empID;
@@ -191,17 +188,6 @@ public class EmployeeFormController {
         JasperViewer.viewReport(jasperPrint,false);
         JasperExportManager.exportReportToPdfFile(jasperPrint,"C:\\Users\\sdwee\\OneDrive\\Documents\\whatsapp\\newreport.pdf");
 
-        /*HashMap map=new HashMap<>();
-        map.put("employee","E001");
-
-
-        InputStream resourceAsStream = getClass().getResourceAsStream("/reports/rentalEmployee.jrxml");
-        JasperDesign load = JRXmlLoader.load(resourceAsStream);
-        JasperReport jasperReport = JasperCompileManager.compileReport(load);
-        JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, map, new JREmptyDataSource());
-        JasperViewer.viewReport(jasperPrint,false);
-
-        JasperExportManager.exportReportToPdfFile(jasperPrint,"C:\\Users\\sdwee\\OneDrive\\Documents\\whatsapp\\report3.pdf");*/
     }
 
 }

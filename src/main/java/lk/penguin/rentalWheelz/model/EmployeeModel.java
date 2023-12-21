@@ -117,4 +117,20 @@ public class EmployeeModel {
         }
         return Ids;
     }
+
+    public List<String> retrieveEmployeeNamesFromDatabase() throws SQLException {
+        List<String> employeeNames=new ArrayList<>();
+        try(
+            Connection connection=DbConnection.getInstance().getConnection();
+            PreparedStatement pstm=connection.prepareStatement("SELECT e_name FROM employee");
+            ResultSet resultSet=pstm.executeQuery()){
+
+            while (resultSet.next()){
+                String name=resultSet.getString("e_name");
+                employeeNames.add(name);
+            }
+        }
+
+        return employeeNames;
+    }
 }

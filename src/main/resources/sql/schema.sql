@@ -11,7 +11,7 @@ CREATE TABLE employee(
                          position VARCHAR(20) NOT NULL,
                          address VARCHAR(200) NOT NULL,
                          contact VARCHAR(15) NOT NULL,
-                         INDEX(emp_id),
+                         INDEX(e_name),
                          INDEX(email)
 );
 
@@ -44,9 +44,10 @@ CREATE TABLE salary (
 
 
 CREATE TABLE attendance (
+                            attendId VARCHAR(10) PRIMARY KEY ,
                             date DATE,
-                            emp_id VARCHAR(10),
-                            CONSTRAINT FOREIGN KEY (emp_id) REFERENCES employee(emp_id) ON DELETE CASCADE ON UPDATE CASCADE
+                            empName VARCHAR(100),
+                            CONSTRAINT FOREIGN KEY (empName) REFERENCES employee(e_name) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 

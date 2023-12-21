@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
 <?import java.net.URL?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
@@ -10,7 +11,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="673.0" prefWidth="1068.0" style="-fx-background-radius: 20; -fx-background-color: #16558F;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.penguin.rentalWheelz.controller.CustomerFormController">
+<AnchorPane prefHeight="673.0" prefWidth="1068.0" style="-fx-background-radius: 20;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.penguin.rentalWheelz.controller.CustomerFormController">
     <children>
         <TableView fx:id="tblCustomer" layoutX="27.0" layoutY="55.0" prefHeight="360.0" prefWidth="1024.0" style="-fx-background-color: #B8E3FF; -fx-border-color: black;">
             <columns>
@@ -20,6 +21,13 @@
                 <TableColumn fx:id="colCustContact" prefWidth="298.666748046875" text="Contact" />
             <TableColumn fx:id="colCustUserID" prefWidth="284.0" text="User ID" />
             </columns>
+         <styleClass>
+            <String fx:value="column-header" />
+            <String fx:value="column-header-background" />
+            <String fx:value="table-row-cell" />
+            <String fx:value="table-view" />
+            <String fx:value="textBox" />
+         </styleClass>
         </TableView>
         <TextField fx:id="txtCustId" alignment="CENTER" layoutX="398.0" layoutY="507.0" prefHeight="44.0" prefWidth="220.0" promptText="Customer ID" style="-fx-background-radius: 30; -fx-background-color: B8E3FF;" />
         <JFXButton layoutX="642.0" layoutY="503.0" onAction="#btnCustSave" prefHeight="26.0" prefWidth="79.0" styleClass="btn" text="Save" />
@@ -27,9 +35,9 @@
         <JFXButton layoutX="190.0" layoutY="504.0" onAction="#btnCustDelete" prefHeight="26.0" prefWidth="79.0" styleClass="btn" text="Delete" />
         <JFXButton layoutX="873.0" layoutY="595.0" onAction="#btnEmpClear" prefHeight="28.0" prefWidth="47.0" style="-fx-background-radius: 0; -fx-background-color: green;" text="Clear" />
         <JFXButton layoutX="417.0" layoutY="428.0" onAction="#btnCustSearch" prefHeight="26.0" prefWidth="79.0" styleClass="btn" text="Search" />
-        <Label layoutX="414.0" layoutY="19.0" prefHeight="44.0" prefWidth="245.0" text="Customer Management">
+        <Label layoutX="414.0" layoutY="19.0" prefHeight="44.0" prefWidth="283.0" text="Customer Management" textFill="#c508ee">
             <font>
-                <Font name="System Bold" size="20.0" />
+                <Font name="System Bold" size="24.0" />
             </font>
         </Label>
       <JFXButton layoutX="901.0" layoutY="27.0" onAction="#btnCustPrint" prefHeight="28.0" prefWidth="47.0" style="-fx-background-radius: 0; -fx-background-color: green;" text="Print" />
@@ -38,5 +46,6 @@
     <stylesheets>
         <URL value="@../bigButton.css" />
         <URL value="@../button.css" />
+      <URL value="@../tableStyle.css" />
     </stylesheets>
 </AnchorPane>

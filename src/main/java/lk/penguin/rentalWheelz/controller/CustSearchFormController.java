@@ -61,21 +61,19 @@ public class CustSearchFormController {
         boolean isCustIDValidated= Pattern.compile("^(C)[0-9]{1,3}$").matcher(txtCustID.getText()).matches();
         if(!isCustIDValidated){
             new Alert(Alert.AlertType.ERROR,"Invalid Customer ID").show();
+
             return false;
         }
-
-        boolean isCustNameValidated=Pattern.compile("^[A-z]{1,}$").matcher(txtCustName.getText()).matches();
-        if(!isCustNameValidated){
-            new Alert(Alert.AlertType.ERROR,"Invalid Customer Name").show();
+        boolean isCustNameValidated = Pattern.compile("^[a-zA-Z]+( [a-zA-Z]+)?$").matcher(txtCustName.getText()).matches();
+        if (!isCustNameValidated) {
+            new Alert(Alert.AlertType.ERROR, "Invalid Customer Name").show();
             return false;
         }
-
-        boolean isCustAddressValidated=Pattern.compile("^[A-z]{1,}$").matcher(txtCustAddress.getText()).matches();
+        boolean isCustAddressValidated=Pattern.compile("^[a-zA-Z, ]{1,100}$").matcher(txtCustAddress.getText()).matches();
         if(!isCustAddressValidated){
             new Alert(Alert.AlertType.ERROR,"Invalid Customer Address").show();
             return false;
         }
-
         boolean isCustContactValidated=Pattern.compile("^[0-9]{1,}$").matcher(txtCustContact.getText()).matches();
         if(!isCustContactValidated){
             new Alert(Alert.AlertType.ERROR,"Invalid Customer Contact").show();
@@ -84,6 +82,7 @@ public class CustSearchFormController {
         boolean isCustUserIDValidated= Pattern.compile("^(U)[0-9]{1,3}$").matcher(txtCustUserId.getText()).matches();
         if(!isCustUserIDValidated){
             new Alert(Alert.AlertType.ERROR,"Invalid User ID").show();
+
             return false;
         }
 

@@ -37,12 +37,6 @@ public class EmpSaveFormController {
     @FXML
     private TextField txtEmpPosition;
 
-    @FXML
-    void btnEmpSaveBack(ActionEvent event) throws IOException {
-
-        //Platform.exit();
-        //Navigation.switchPaging(GlobalFormController.getInstance().pagingPane, "employeeForm.fxml");
-    }
 
     @FXML
     void btnEmpSaveSaveOnAction(ActionEvent event) {
