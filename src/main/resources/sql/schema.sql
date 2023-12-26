@@ -1,5 +1,5 @@
 
-drop database rental_wheelz;
+drop database if exists rental_wheelz;
 
 create database rental_wheelz;
 
